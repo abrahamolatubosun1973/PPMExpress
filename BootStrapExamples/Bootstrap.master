@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Bootstrap.master.cs" Inherits="BootStrapExamples_Bootstrap" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="collapse navbar-collapse">
+                <form class="navbar-form pull-right">
+                    <div class="input-group">
+                        <input type="search" title="Search" placeholder="Enter search" class="form-control" />
+                        <span class="input-group-addon glyphicon glyphicon-search"></span>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav pull-right">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<b class="caret"></b>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Intelligent Mobile Detector</a></li>
+                            <li><a href="#">Intelligent Car Tracker</a></li>
+                            <li><a href="#">Intelligent Home Alarm</a></li>
+                        </ul>
+                                         </a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul><img class="glyphicon-import"  src="../image/unnamed.jpg" />
+
+                    
+                <a  href="../image/unnamed.jpg" class="navbar-brand" >Providing Excellence in all health services</a>
+            </div>
+        </div>
+
+    </header>
+    <form id="form1" runat="server">
+    <div class="container" style="margin-top:60px">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+        <footer class="navbar navbar-fixed-bottom navbar-inverse">
+            <p style="color:white" class="text-center">Copyright &copy; ECEWS 2016</p>
+        </footer>
+    </form>
+    <script src="../Scripts/jquery-1.9.1.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+</body>
+</html>

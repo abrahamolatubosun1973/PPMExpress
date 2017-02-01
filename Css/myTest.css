@@ -1,0 +1,30 @@
+﻿body {
+    font :smaller;
+}
+
+.left{
+    float:left;
+    clear:left;
+    /*width: 178px;
+    height: 63px;*/
+}
+
+.right{
+    float:right;
+    clear:right;
+}
+.clearboth{
+    padding-left:25em;
+}
+ .alignme{
+     float:right;
+    
+     margin-left:auto;
+     margin-right:auto;
+ }
+ .alignme2{
+     float:right;
+     clear:both;
+     text-align:right;
+
+ }

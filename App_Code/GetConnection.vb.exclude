@@ -1,0 +1,116 @@
+﻿Imports Microsoft.VisualBasic
+Imports System.Data.SqlClient
+Imports System.Data
+'Imports mCore
+
+Public Class GetConnection
+    Public Shared Function ConnectMe() As String
+        
+        ' "User Instance=true;UID=sa;password=pa55w0rd;"
+
+
+        Dim Constring As String = "Data Source=.\SQLExpress;" & _
+                                                 "AttachDBFilename=|DataDirectory|db_PHRS.mdf;" & _
+                                                 "Integrated Security=SSPI;" & _
+                                                 "User Instance=False;Trusted_Connection=True;"
+
+       
+        'Dim Constring As String = "Data Source=ABRAHAM-PC;AttachDBFilename=|DataDirectory|db_PHRS.mdf;Integrated Security=SSPI;"
+        Return Constring
+    End Function
+
+    Public Shared Function Regs()
+        'Dim sMNTH As String = Now.Month
+        'Dim sYr As String = Now.Year
+        'Dim T As String = ""
+
+        'Dim startdate As String = "28/09/2014" 'supply at any time you renew the application
+        'Dim StartDates As DateTime = CDate(startdate)
+        'Dim expiryDate = StartDates.AddDays(90)
+        'Dim backdate = Mid(startdate, 4, 2)   'StartDates.AddDays(-30)
+
+        'sMNTH = IIf(sMNTH >= 10, sMNTH, "0" + sMNTH)
+        'If sMNTH < backdate And sYr = Right(startdate, 4) Then 'Or backdate <> expiryDate Then
+        '    ' lblMsg.Visible = True
+        '    T = "Registration back dated please contact system vendor for new registration.."
+        '    Return T
+        '    Exit Function
+
+        'ElseIf DateTime.Now > expiryDate Then
+        '    'lblMsg.Visible = True
+        '    T = "Registration Expired please contact system vendor for new registration.."
+        '    Return T
+        '    Exit Function
+        '    'End If
+
+        'End If
+
+        Return 0
+
+
+        'If sMNTH > "8" And sYr = "2014" Then
+        '    lblMsg.Visible = True
+        '    lblMsg.Text = "Registration error please contact system vendor for new registration.."
+        '    Exit Sub
+        'End If
+
+    End Function
+
+    Public Sub SendSMS(ByVal Num As String, ByVal Tx As String)
+        'Dim objSMS As New mCore.SMS
+
+        'Try
+        '    objSMS.Port = "COM7"
+        '    'objSMS.Port = "COM9"
+        '    'objSMS.BaudRate = mCore.BaudRate.BaudRate_19200
+        '    objSMS.BaudRate = mCore.BaudRate.BaudRate_460800
+        '    objSMS.DataBits = mCore.DataBits.Eight
+        '    objSMS.StopBits = mCore.StopBits.One
+        '    objSMS.Parity = mCore.Parity.None
+        '    objSMS.FlowControl = mCore.FlowControl.RTS_CTS
+        '    objSMS.Encoding = mCore.Encoding.GSM_Default_7Bit
+        '    objSMS.LongMessage = mCore.LongMessage.Concatenate
+        '    objSMS.Connect()
+        '    Try
+        '        objSMS.SendSMS(Num, Tx)
+        '        'MsgBox("Message Sent!")
+        '    Catch ex As Exception
+        '        'MsgBox("Message Failed!" & vbCrLf & ex.Message)
+        '    End Try
+        'Catch ex As Exception
+        '    'MsgBox(ex.Message, MsgBoxStyle.OkOnly, "Sms sending failed")
+        '    Exit Sub
+        'End Try
+
+
+    End Sub
+    Public Sub SendSMSAll(ByVal Num As String, ByVal Tx As String)
+        'Dim objSMS As New mCore.SMS
+
+        'Try
+        '    objSMS.Port = "COM9"
+        '    'objSMS.BaudRate = mCore.BaudRate.BaudRate_19200
+        '    objSMS.BaudRate = mCore.BaudRate.BaudRate_460800
+        '    objSMS.DataBits = mCore.DataBits.Eight
+        '    objSMS.StopBits = mCore.StopBits.One
+        '    objSMS.Parity = mCore.Parity.None
+        '    objSMS.FlowControl = mCore.FlowControl.RTS_CTS
+        '    objSMS.Encoding = mCore.Encoding.GSM_Default_7Bit
+        '    objSMS.LongMessage = mCore.LongMessage.Concatenate
+        '    objSMS.Connect()
+        '    Try
+        '        objSMS.SendSMS(Num, Tx)
+        '        objSMS.Disconnect()
+        '        objSMS.Dispose()
+        '    Catch ex As Exception
+        '        'MsgBox("Message Failed!" & vbCrLf & ex.Message)
+        '    End Try
+        'Catch ex As Exception
+        '    'MsgBox(ex.Message, MsgBoxStyle.OkOnly, "Sms sending failed")
+        '    Exit Sub
+        'End Try
+
+
+    End Sub
+
+End Class

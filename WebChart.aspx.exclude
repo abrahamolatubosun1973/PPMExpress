@@ -1,0 +1,61 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" MaintainScrollPositionOnPostback="true" AutoEventWireup="true" CodeFile="WebChart.aspx.cs" Inherits="WebChart" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style type="text/css">
+        .auto-style1 {
+            width: 329px;
+        }
+        </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <table class="style1">
+        <tr>
+            <td class="auto-style1">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;&nbsp;</td>
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            <asp:Label ID="Label1" runat="server" Text="Select chart type :" style="font-weight: 700"></asp:Label>
+                            &nbsp;&nbsp;
+                            <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged"></asp:DropDownList>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="border-style: solid; border-width: thin">
+                  <asp:Chart ID="Chart1" runat="server" Height="471px" Width="550px" style="margin-right: 0px">
+                        <Titles>
+                            <asp:Title Text="Trend of Analysis"></asp:Title>
+                        </Titles>
+                        <Legends>
+                            <asp:Legend Alignment="Center" Docking="Bottom" IsTextAutoFit="false" Name="Default" LegendStyle="Row"></asp:Legend>
+                        </Legends>
+                        <Series>
+                            <asp:Series Name="Series1">
+                            </asp:Series>
+                        </Series>
+                        <ChartAreas>
+                            <asp:ChartArea Name="ChartArea1">
+                            </asp:ChartArea>
+                        </ChartAreas>
+                </asp:Chart>
+                        </td>
+                    </tr>
+                </table>
+               
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+</asp:Content>
+

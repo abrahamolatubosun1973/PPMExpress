@@ -1,0 +1,314 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" EnableViewState="true" Inherits="MasterPage" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>PPMExpress</title>
+    <script language="javascript" type="text/javascript">
+        window.onbeforeunload = function () {
+            // This function does nothing.  It won't spawn a confirmation dialog   
+            // But it will ensure that the page is not cached by the browser.
+        }
+    </script>
+    
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Css/myTest.css" rel="stylesheet" type="text/css" />
+   <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .auto-style2 {
+            width: 100%;
+        }
+        .auto-style12 {
+        text-align: right;
+        }
+        .auto-style8 {
+            width: 368px;
+        }
+        .auto-style16 {
+            text-align: left;
+        }
+        .auto-style17 {
+           text-align: right;
+           font-weight: bold;
+           width: 133px;
+       }
+        </style>
+
+
+
+</head>
+    <%-- <body onkeydown="return disableKeyPress(event)"> --%>
+
+<body >
+    <form id="form1" runat="server">
+    
+        <table class="style1">
+            <tr>
+                <td class="style2">
+                    &nbsp;</td>
+                <td>
+                    <%--<div class="left" id="left1">
+                    <asp:Image ID="Image1" runat="server" Height="96px" 
+                        ImageUrl="~/image/unnamed.jpg" Width="489px" />
+
+                    </div>--%>
+                    
+                    <div class="right" id="right1">
+                        <%=DateTime.Now.ToLocalTime()%>
+                    </div><br />
+                    <%--<hr />--%>
+
+                </td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="style2">
+
+                    &nbsp;</td>
+                <td style="text-align: center" >
+                 
+                    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+                        <div class="container">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="sr-only"></span>
+                                    <span class="sr-only"></span>
+                                    <span class="sr-only"></span>
+                                </button>
+                                <%--=============== ECEWS LOGO ===============--%>
+                                <div class="left" id="left1">
+                                <asp:Image ID="Image1" runat="server" Height="96px" 
+                                    ImageUrl="~/image/unnamed.jpg" Width="489px" /> 
+                                    <%--<img class="glyphicon-align-left" src="image/unnamed.jpg" />--%>
+                                </div>
+                                <%--================= END LOGO =================--%>
+                         
+               <%-- ====================================
+                         Start of Menu Item
+                    ====================================--%>
+                                <asp:Menu runat="server" BackColor="#B5C7DE" Font-Names="Verdana" Font-Size="0.9em" 
+                        ForeColor="#284E98" Orientation="Horizontal" StaticSubMenuIndent="12px" 
+                        Width="100%">
+                       <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                       <DynamicMenuItemStyle HorizontalPadding="20px" VerticalPadding="5px" />
+                       <DynamicMenuStyle BackColor="#B5C7DE" HorizontalPadding="5px" 
+                           VerticalPadding="2px" />
+                       <DynamicSelectedStyle BackColor="#507CD1" />
+                       <Items>
+                           <%--<asp:MenuItem Text="Setup" Value="Setup">
+                               <asp:MenuItem Text="State/Facility" Value="State/Facility">
+                                   <asp:MenuItem NavigateUrl="~/frmState.aspx" Text="State and LGA" 
+                                       Value="State and LGA"></asp:MenuItem>
+                                   <asp:MenuItem NavigateUrl="~/frmFacility.aspx" Text="Facility Setup" 
+                                       Value="Facility Setup"></asp:MenuItem>
+                               </asp:MenuItem>
+                               <asp:MenuItem Text="Group Setup" Value=" " NavigateUrl="~/Groups/frmGhead.aspx"></asp:MenuItem>
+                               <asp:MenuItem Text="Sub-Group" Value="Sub-Group" 
+                                   NavigateUrl="~/Groups/frmSubgroup.aspx"></asp:MenuItem>
+                               <asp:MenuItem Text="Data Element" Value="Data Element" 
+                                   NavigateUrl="~/Groups/frmDataElement.aspx"></asp:MenuItem>
+                           </asp:MenuItem>--%>
+                           <asp:MenuItem Text="Data Entry" Value="Data Entry">
+                               <asp:MenuItem Text="Data Entries" Value="Data Entries" NavigateUrl="~/DataEntries.aspx"></asp:MenuItem>
+                               <asp:MenuItem NavigateUrl="~/Programm/DataKeyIndicator.aspx" Text="Key Indicator" Value="Key Indicator"></asp:MenuItem>
+                               <asp:MenuItem NavigateUrl="~/Programm/TargetEntry.aspx" Text="Target Entry " Value="Target Entry "></asp:MenuItem>
+                           </asp:MenuItem>
+                           <asp:MenuItem Text="Reports" Value="Reports">
+                               <asp:MenuItem Text="Periodic Report" Value="Selective Report" NavigateUrl="~/Frm_ReportTemp.aspx"></asp:MenuItem>
+                               <%--<asp:MenuItem Text="Cummulative Report" Value="Summary Report"></asp:MenuItem>
+                               <asp:MenuItem Text="Cumulative Report" Value="Cumulative Report" NavigateUrl="~/Frm_ReportTemp.aspx"></asp:MenuItem>--%>
+                               <asp:MenuItem Text="Trend Analysis" Value="Trend Analysis" NavigateUrl="~/FrmTrend.aspx"></asp:MenuItem>
+                               <asp:MenuItem Text="Archievment Report" Value="Archievment Report" NavigateUrl="~/Programm/Program_Report.aspx"></asp:MenuItem>
+                           </asp:MenuItem>
+                          <%-- <asp:MenuItem Text="Admin" Value="Admin">
+                               <asp:MenuItem Text="Create User" Value="Create User"></asp:MenuItem>
+                               <asp:MenuItem Text="Create Roles" Value="Create Roles"></asp:MenuItem>
+                               <asp:MenuItem Text="Remove User" Value="Remove User"></asp:MenuItem>
+                               <asp:MenuItem Text="Remove Roles" Value="Remove Roles"></asp:MenuItem>
+                           </asp:MenuItem>--%>
+                       </Items>
+                       <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                       <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" 
+                           ItemSpacing="35px" Width="120px" />
+                       <StaticMenuStyle HorizontalPadding="10px" 
+                           VerticalPadding="5px" Width="750px" />
+                       <StaticSelectedStyle BackColor="#507CD1" />
+                    </asp:Menu>
+<%--============================================
+================ End of Menu ===============--%>
+                                       <div class="right">
+                        <a href="DataEntries.aspx">| Home |</a>
+                        <a href="Default.aspx"> DashBoard|</a>
+                    </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+
+
+
+                    <hr />
+                    </td>
+                <td>
+                     </td>
+            </tr>
+            <tr>
+                <td >
+                     </td>
+                <td>
+                     <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+                       </asp:ToolkitScriptManager>
+
+                   
+                      <%--<div class="alignme ">
+                        <a href="DataEntries.aspx">| Home |</a>
+                        <a href="Default.aspx"> DashBoard|</a>
+                    </div>--%>
+                      <div class="container" style="margin-top:78px">
+                     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                   <ContentTemplate>
+                                <table class="auto-style2"  >
+                                    <tr >
+                                        <td class="auto-style17" style="border-style: solid; border-width: thin;"  >
+                                            <asp:Label ID="Label921" runat="server" Text="State :"></asp:Label>
+                                        </td>
+                                        <td class="auto-style8" style="border-style: solid; border-width: thin;" >
+                                         <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                                            <ContentTemplate>
+
+                                            <asp:DropDownList ID="drpStates" runat="server" Width="198px" AutoPostBack="True" OnSelectedIndexChanged="drpStates_SelectedIndexChanged" >
+                                            </asp:DropDownList>
+                                            <asp:Label ID="lblmsg9" runat="server" style="color: #FF0000">*</asp:Label>
+                                           </ContentTemplate>
+                                        </asp:UpdatePanel>
+                                            
+                                        </td>
+                                        <td>
+                                       
+                                            <asp:UpdateProgress ID="UpdateProgress1" runat="server" AssociatedUpdatePanelID="UpdatePanel2">
+                                             <ProgressTemplate>
+                                             
+                                             <img src="image/ajax-loader(1).gif" style="height: 82px; width: 92px" />
+                                                <%--<div style="width:101px; height:20px;"></div>--%>
+
+                                                </ProgressTemplate>
+                                            </asp:UpdateProgress>
+                                        
+                                        </td>
+                                    </tr>
+                                    <tr >
+                                        <td class="auto-style17" style="border-style: solid; border-width: thin;" >
+                                            <asp:Label ID="Label922" runat="server" Text="LGA :"></asp:Label>
+                                        </td>
+                                        <td class="auto-style8" style="border-style: solid; border-width: thin;" >
+                                            <asp:DropDownList ID="drpLGA" runat="server" Width="198px" AutoPostBack="True" OnSelectedIndexChanged="drpLGA_SelectedIndexChanged" >
+                                            </asp:DropDownList>
+                                            <asp:Label ID="lblmsg8" runat="server" style="color: #FF0000">*</asp:Label>
+                                        </td>
+                                        <td >
+                                            <asp:Label ID="lblmsg" runat="server" Visible="False"></asp:Label>
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="auto-style17" style="border-style: solid; border-width: thin;">Facility :</td>
+                                        <td class="auto-style8" style="border-style: solid; border-width: thin;">
+                                            <asp:DropDownList ID="drpFacility" runat="server" Width="198px">
+                                            </asp:DropDownList>
+                                            <asp:Label ID="lblmsg7" runat="server" style="color: #FF0000">*</asp:Label>
+                                        </td>
+                                        <td >
+                                        
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="auto-style17" style="border-style: solid; border-width: thin;" >
+                                            <asp:Label ID="Label923" runat="server" Text="Month :"></asp:Label>
+                                        </td>
+                                        <td class="auto-style8" style="border-style: solid; border-width: thin;" >
+                                            <asp:DropDownList ID="drpMnth" runat="server" Width="90px">
+                                            </asp:DropDownList>
+                                            <asp:Label ID="lblmsg6" runat="server" style="color: #FF0000">*</asp:Label>
+                                        </td>
+                                        <td >&nbsp;</td>
+                                    </tr>
+                                    <tr >
+                                        <td class="auto-style17" style="border-style: solid; border-width: thin;">
+                                            <asp:Label ID="Label924" runat="server" Text="Year :"></asp:Label>
+                                        </td>
+                                        <td class="auto-style8" style="border-style: solid; border-width: thin;"  >
+                                            <asp:DropDownList ID="drpYrs" runat="server" Width="90px">
+                                            </asp:DropDownList>
+                                            <asp:Label ID="lblmsg10" runat="server" style="color: #FF0000">*</asp:Label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="auto-style17" style="border-style: solid; border-width: thin;" >
+                                            <asp:Label ID="Label920" runat="server" Text="Thematic Area :"></asp:Label>
+                                        </td>
+                                        <td class="auto-style8" style="border-style: solid; border-width: thin;" >
+                                            <asp:UpdatePanel ID="UpdatePanel3" runat="server">
+                                            <ContentTemplate>
+                                            <asp:DropDownList ID="drpThematic" runat="server" AutoPostBack="True" Width="198px" OnSelectedIndexChanged="drpThematic_SelectedIndexChanged" >
+                                            </asp:DropDownList>
+                                            <asp:TextBox ID="TextBox798" runat="server" BorderColor="#CCCCCC" ReadOnly="True" Width="95px" style="color: #FF0000" Visible="False"></asp:TextBox>
+                                            <asp:Label ID="lblmsg5" runat="server" style="color: #FF0000">*</asp:Label>
+                                            </ContentTemplate>
+                                            </asp:UpdatePanel>
+                                        </td>
+                                        <td>
+
+                                            <asp:UpdateProgress ID="UpdateProgress2" runat="server" AssociatedUpdatePanelID="UpdatePanel3">
+                                                <ProgressTemplate>
+                                                   Loading...... <img src="image/bar-ajax-loader.gif" style="height: 16px; width: 137px" />
+                                                    <%--<div style="width:101px; height:20px;"></div>--%>
+                                                </ProgressTemplate>
+                                            </asp:UpdateProgress>
+&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="auto-style12" style="border-style: solid; border-width: thin; text-align: left;" colspan="2">
+                                            </td>
+                                    </tr>
+                                    <caption class="auto-style16" >
+                                        <strong >PROGRAM INDICATOR ENTRY FORM</strong>&nbsp;</caption>
+                                </table>
+                               </ContentTemplate>
+                         </asp:UpdatePanel>
+                        </div>  
+                    <hr />
+                            <div class="container" style="margin-top:40px">
+                                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                                </asp:ContentPlaceHolder>
+                            </div>
+                        
+                </td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="style2">
+                    &nbsp;</td>
+                <td>
+                <div id="footer">
+                <hr />
+                    <div id="lcenter" 
+                        style="font-family: 'Times New Roman', Times, serif; font-size: small; text-align: center; background-color: #C0C0C0; color: #800000; font-weight: bold;">
+                    Copyright &copy; 2015 | Property of Excellence Commuinty Education Walfare Scheme (ECEWS )
+                            </div></tr>
+        </table>
+    
+    </form>
+    <script src="/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Data;
+
+public partial class DataEntry : System.Web.UI.Page
+{
+    protected void Yrs()
+    {
+        int YrNo = 2020;
+        drpYrs.ClearSelection();
+        drpYrs.Items.Clear();
+        drpYrs.Items.Add("");
+        for (int i = 2000; i <= YrNo ; i++)
+        {
+            drpYrs.Items.Add(i.ToString());
+        }
+    }
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            Yrs();
+            
+        }
+    }
+}

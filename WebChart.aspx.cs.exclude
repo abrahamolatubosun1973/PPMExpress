@@ -1,0 +1,77 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Data;
+using System.Web.UI.DataVisualization.Charting;
+
+public partial class WebChart : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if(!Page.IsPostBack )
+        {
+           // GetChartData();
+            GetChartType();
+        }
+    }
+
+    private void GetChartType()
+    {
+        try
+        {
+            DropDownList1.Items.Add("");
+            foreach(int ChartType in Enum.GetValues(typeof(SeriesChartType)))
+            {
+                ListItem li = new ListItem(Enum.GetName(typeof(SeriesChartType), ChartType), ChartType.ToString());
+                DropDownList1.Items.Add(li);
+            }
+        }catch(Exception ex)
+        {
+            Response.Write("<script language=javascript>alert('" + ex.Message.ToString() + "');</script>");
+            return;
+        }
+    }
+    //======
+
+    private void GetChartData()
+    {
+        try
+        {
+            string sql = "Select * from tbl_ART";
+            using (SqlConnection cn = new SqlConnection(ConnectAll.ConnectMe()))
+            {
+                SqlCommand cmd = new SqlCommand(sql,cn);
+                cn.Open();
+                Series series = Chart1.Series["Series1"];
+
+                               
+                SqlDataReader  rd = cmd.ExecuteReader();
+                while(rd.Read())
+                {
+                    series.Points.AddXY(rd["facname"], rd["totalg1"]);
+                }
+                
+            }
+            
+
+        }
+        catch (Exception ex)
+        {
+            Response.Write("<script language=javascript>alert('" + ex.Message.ToString() + "');</script>");
+            return;
+        }
+
+    }
+
+
+    protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        
+        Chart1.Series["Series1"].ChartType = (SeriesChartType)Enum.Parse(typeof(SeriesChartType), DropDownList1.SelectedValue);
+        GetChartData();
+    }
+}
