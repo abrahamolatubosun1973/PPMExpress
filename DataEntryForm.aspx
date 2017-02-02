@@ -216,6 +216,21 @@
           function sumUpPP5() {
               document.getElementById('<%=TextBox303.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox304.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox796.ClientID%>').value);
           }
+
+          <%-- --------- Post Exposure Prophylaxis (PEP) ---------- --%>
+
+          <%-- Row 1  --%>
+          function sumUpPEP1() {
+
+              document.getElementById('<%=TextBox318.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox319.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox320.ClientID%>').value);
+              document.getElementById('<%=TextBox321.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox322.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox323.ClientID%>').value);
+              document.getElementById('<%=TextBox306.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox318.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox321.ClientID%>').value);
+
+              document.getElementById('<%=TextBox316.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox319.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox322.ClientID%>').value);
+              document.getElementById('<%=TextBox317.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox320.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox323.ClientID%>').value);
+              document.getElementById('<%=TextBox324.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox325.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox326.ClientID%>').value);
+              document.getElementById('<%=TextBox327.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox328.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox797.ClientID%>').value);
+          }
       </script>
     <style type="text/css">
         .auto-style17 {
@@ -3665,12 +3680,12 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox319" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox319" runat="server" Width="52px" onKeyUp="sumUpPEP1()"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                           <asp:Panel ID="Panel44" runat="server" DefaultButton="Button44">
                                                             <asp:Button ID="Button44" runat="server" Text="Button" Style="display:none" OnClick="Button44_Click"  />
-                                                        <asp:TextBox ID="TextBox320" runat="server" OnTextChanged="TextBox320_TextChanged" Width="52px" AutoPostBack="False"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox320" runat="server" OnTextChanged="TextBox320_TextChanged" Width="52px" AutoPostBack="False" onKeyUp="sumUpPEP1()"></asp:TextBox>
                                                               </asp:Panel>
                                                     </td>
                                                 </tr>
@@ -3708,12 +3723,12 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <asp:TextBox ID="TextBox322" runat="server" Width="52px"></asp:TextBox>
+                                                            <asp:TextBox ID="TextBox322" runat="server" Width="52px" onKeyUp="sumUpPEP1()"></asp:TextBox>
                                                         </td>
                                                         <td>
                                                               <asp:Panel ID="Panel45" runat="server" DefaultButton="Button45">
                                                             <asp:Button ID="Button45" runat="server" Text="Button" Style="display:none" OnClick="Button45_Click"  />
-                                                            <asp:TextBox ID="TextBox323" runat="server" OnTextChanged="TextBox323_TextChanged" Width="52px" AutoPostBack="False"></asp:TextBox>
+                                                            <asp:TextBox ID="TextBox323" runat="server" OnTextChanged="TextBox323_TextChanged" Width="52px" AutoPostBack="False" onKeyUp="sumUpPEP1()"></asp:TextBox>
                                                             </asp:Panel>
                                                         </td>
                                                     </tr>
@@ -3751,12 +3766,12 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <asp:TextBox ID="TextBox325" runat="server" Width="52px"></asp:TextBox>
+                                                            <asp:TextBox ID="TextBox325" runat="server" Width="52px" onKeyUp="sumUpPEP1()"></asp:TextBox>
                                                         </td>
                                                         <td>
                                                               <asp:Panel ID="Panel46" runat="server" DefaultButton="Button46">
                                                             <asp:Button ID="Button46" runat="server" Text="Button" Style="display:none" OnClick="Button46_Click"  />
-                                                            <asp:TextBox ID="TextBox326" runat="server" OnTextChanged="TextBox326_TextChanged" Width="52px" AutoPostBack="False"></asp:TextBox>
+                                                            <asp:TextBox ID="TextBox326" runat="server" OnTextChanged="TextBox326_TextChanged" Width="52px" AutoPostBack="False" onKeyUp="sumUpPEP1()"></asp:TextBox>
                                                             </asp:Panel>
                                                         </td>
                                                     </tr>
@@ -3794,12 +3809,12 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <asp:TextBox ID="TextBox328" runat="server" Width="52px"></asp:TextBox>
+                                                            <asp:TextBox ID="TextBox328" runat="server" Width="52px" onKeyUp="sumUpPEP1()"></asp:TextBox>
                                                         </td>
                                                         <td>
                                                           <asp:Panel ID="Panel47" runat="server" DefaultButton="Button47">
                                                             <asp:Button ID="Button47" runat="server" Text="Button" Style="display:none" OnClick="Button47_Click"  />
-                                                            <asp:TextBox ID="TextBox797" runat="server" AutoPostBack="False" OnTextChanged="TextBox797_TextChanged" Width="52px"></asp:TextBox>
+                                                            <asp:TextBox ID="TextBox797" runat="server" AutoPostBack="False" OnTextChanged="TextBox797_TextChanged" Width="52px" onKeyUp="sumUpPEP1()"></asp:TextBox>
                                                         </asp:Panel>
                                                         </td>
                                                     </tr>
