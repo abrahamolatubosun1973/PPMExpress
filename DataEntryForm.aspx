@@ -174,6 +174,48 @@
               document.getElementById('<%=TextBox244.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox245.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox246.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox247.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox248.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox249.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox250.ClientID%>').value);
               document.getElementById('<%=TextBox236.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox237.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox244.ClientID%>').value)
           }
+
+          <%-- --------- Priority Population (PP) ---------- --%>
+
+          <%-- Row 1 = School Based + Community Based --%>
+          function sumUpPP1() {
+
+              document.getElementById('<%=TextBox255.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox256.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox257.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox258.ClientID%>').value);
+              document.getElementById('<%=TextBox259.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox260.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox261.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox262.ClientID%>').value);
+              document.getElementById('<%=TextBox254.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox255.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox259.ClientID%>').value);
+
+              document.getElementById('<%=TextBox264.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox265.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox266.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox267.ClientID%>').value);
+              document.getElementById('<%=TextBox268.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox269.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox270.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox271.ClientID%>').value);
+              document.getElementById('<%=TextBox263.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox264.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox268.ClientID%>').value);
+
+              document.getElementById('<%=TextBox253.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox254.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox263.ClientID%>').value);
+          }
+           <%-- Row 2 = School Based + Community Based --%>
+          function sumUpPP2() {
+
+              document.getElementById('<%=TextBox274.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox275.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox276.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox277.ClientID%>').value);
+              document.getElementById('<%=TextBox278.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox279.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox280.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox281.ClientID%>').value);
+              document.getElementById('<%=TextBox273.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox274.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox278.ClientID%>').value);
+
+              document.getElementById('<%=TextBox283.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox284.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox285.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox286.ClientID%>').value);
+              document.getElementById('<%=TextBox287.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox288.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox289.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox290.ClientID%>').value);
+              document.getElementById('<%=TextBox282.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox283.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox287.ClientID%>').value);
+
+              document.getElementById('<%=TextBox272.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox273.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox282.ClientID%>').value);
+          }
+          <%-- Row 3 --%>
+          function sumUpPP3() {
+
+              document.getElementById('<%=TextBox291.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox292.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox293.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox294.ClientID%>').value);
+          }
+          <%-- Row 4 --%>
+          function sumUpPP4() {
+              document.getElementById('<%=TextBox295.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox296.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox297.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox298.ClientID%>').value)+ parseFloat(document.getElementById('<%=TextBox299.ClientID%>').value)+parseFloat(document.getElementById('<%=TextBox300.ClientID%>').value)+parseFloat(document.getElementById('<%=TextBox301.ClientID%>').value);
+          }
+           <%-- Row 5 --%>
+          function sumUpPP5() {
+              document.getElementById('<%=TextBox303.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox304.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox796.ClientID%>').value);
+          }
       </script>
     <style type="text/css">
         .auto-style17 {
@@ -302,7 +344,7 @@
                             <td class="auto-style8" style="border-style: solid; border-width: thin;" >
                                 <asp:DropDownList ID="drpThematic" runat="server" AutoPostBack="False" Width="198px" OnSelectedIndexChanged="drpThematic_SelectedIndexChanged">
                                 </asp:DropDownList>
-                                <asp:TextBox ID="TextBox798" runat="server" BorderColor="#CCCCCC" ReadOnly="True" Width="95px" style="color: #FF0000" Visible="False"></asp:TextBox>
+                                <asp:TextBox ID="TextBox798" runat="server" BorderColor="#CCCCCC" ReadOnly="false" Width="95px" style="color: #FF0000" Visible="False"></asp:TextBox>
                                 <asp:Label ID="lblmsg5" runat="server" style="color: #FF0000">*</asp:Label>
                             </td>
                         </tr>
@@ -336,7 +378,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                          <asp:TextBox ID="TextBox1" runat="server" Width="52px" BackColor="#CCCCCC" ReadOnly="True"></asp:TextBox>
+                                                          <asp:TextBox ID="TextBox1" runat="server" Width="52px" BackColor="#CCCCCC" ReadOnly="false"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -351,7 +393,7 @@
                                                         <asp:Label ID="Label2" runat="server" Text="Males"></asp:Label>
                                                     </td>
                                                     <td>
-                                                           <asp:TextBox ID="TextBox2" runat="server" Width="52px" BackColor="#CCCCCC" ReadOnly="True"></asp:TextBox>
+                                                           <asp:TextBox ID="TextBox2" runat="server" Width="52px" BackColor="#CCCCCC" ReadOnly="false"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -422,7 +464,7 @@
                                                         <asp:Label ID="Label9" runat="server" Text="Female"></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox9" runat="server" Width="52px" BackColor="#CCCCCC" ReadOnly="True"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox9" runat="server" Width="52px" BackColor="#CCCCCC" ReadOnly="false"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -493,7 +535,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                         <asp:TextBox ID="TextBox16" runat="server" Width="52px" BackColor="#CCCCCC" ReadOnly="True"></asp:TextBox>
+                                                         <asp:TextBox ID="TextBox16" runat="server" Width="52px" BackColor="#CCCCCC" ReadOnly="false"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -508,7 +550,7 @@
                                                         <asp:Label ID="Label17" runat="server" Text="Male"></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox17" runat="server" Width="52px" BackColor="#CCCCCC" ReadOnly="True"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox17" runat="server" Width="52px" BackColor="#CCCCCC" ReadOnly="false"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -589,7 +631,7 @@
                                                         <asp:Label ID="Label24" runat="server" Text="Female"></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox25" runat="server" Width="52px" BackColor="#CCCCCC" ReadOnly="True"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox25" runat="server" Width="52px" BackColor="#CCCCCC" ReadOnly="false"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -669,7 +711,7 @@
                                                         <asp:Label ID="Label31" runat="server" Text="Number of OVC receiving Supplemental Direct Support (&lt; 3 Services)"></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox49" runat="server" Width="52px" BackColor="#CCCCCC" ReadOnly="True"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox49" runat="server" Width="52px" BackColor="#CCCCCC" ReadOnly="false"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -685,7 +727,7 @@
                                                         <asp:Label ID="Label40" runat="server" Text="Male"></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox33" runat="server" Width="52px" BackColor="#CCCCCC" ReadOnly="True"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox33" runat="server" Width="52px" BackColor="#CCCCCC" ReadOnly="false"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -763,7 +805,7 @@
                                                          <asp:Label ID="Label48" runat="server" Text="Female"></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox41" runat="server" Width="52px" BackColor="#CCCCCC" ReadOnly="True"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox41" runat="server" Width="52px" BackColor="#CCCCCC" ReadOnly="false"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -841,7 +883,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox50" Width="52px" runat="server" BackColor="#CCCCCC" ReadOnly="True"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox50" Width="52px" runat="server" BackColor="#CCCCCC" ReadOnly="false"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -856,7 +898,7 @@
                                                         <asp:Label ID="Label26" runat="server" Text="Male"></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox51" Width="52px" runat="server" BackColor="#CCCCCC" ReadOnly="True"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox51" Width="52px" runat="server" BackColor="#CCCCCC" ReadOnly="false"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -932,7 +974,7 @@
                                                         <asp:Label ID="Label63" runat="server" Text="Female"></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox59" runat="server" BackColor="#CCCCCC" ReadOnly="True" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox59" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -1009,7 +1051,7 @@
                                                         <asp:Label ID="Label71" runat="server" Text="Number of eligible adults and children who received food and/or other nutrition services"></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox67" runat="server" BackColor="#CCCCCC" ReadOnly="True" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox67" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -1023,7 +1065,7 @@
                                                         <asp:Label ID="Label72" runat="server" Text="Male"></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox68" runat="server" BackColor="#CCCCCC" ReadOnly="True" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox68" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -1099,7 +1141,7 @@
                                                         <asp:Label ID="Label80" runat="server" Text="Female"></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox76" runat="server" BackColor="#CCCCCC" ReadOnly="True" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox76" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -1176,7 +1218,7 @@
                                                         <asp:Label ID="Label88" runat="server" Text="Number of OVC provided with psychosocial support"></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox84" runat="server" BackColor="#CCCCCC" ReadOnly="True" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox84" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -1190,7 +1232,7 @@
                                                         <asp:Label ID="Label89" runat="server" Text="Male"></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox85" runat="server" BackColor="#CCCCCC" ReadOnly="True" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox85" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -1266,7 +1308,7 @@
                                                         <asp:Label ID="Label97" runat="server" Text="Female"></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox93" runat="server" BackColor="#CCCCCC" ReadOnly="True" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox93" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -1344,7 +1386,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox101" runat="server" BackColor="#CCCCCC" ReadOnly="True" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox101" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -1358,7 +1400,7 @@
                                                         <asp:Label ID="Label106" runat="server" Text="Male"></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox102" runat="server" BackColor="#CCCCCC" ReadOnly="True" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox102" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -1434,7 +1476,7 @@
                                                         <asp:Label ID="Label114" runat="server" Text="Female"></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox110" runat="server" BackColor="#CCCCCC" ReadOnly="True" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox110" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -1512,7 +1554,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox118" runat="server" BackColor="#CCCCCC" ReadOnly="True" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox118" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -1526,7 +1568,7 @@
                                                         <asp:Label ID="Label123" runat="server" Text="Male"></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox119" runat="server" BackColor="#CCCCCC" ReadOnly="True" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox119" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -1602,7 +1644,7 @@
                                                         <asp:Label ID="Label131" runat="server" Text="Female"></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox127" runat="server" BackColor="#CCCCCC" ReadOnly="True" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox127" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -1679,7 +1721,7 @@
                                                         <asp:Label ID="Label139" runat="server" Text="Number of active beneficiaries receiving support from PEPFAR OVC programs to access HIV services"></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox135" runat="server" BackColor="#CCCCCC" ReadOnly="True" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox135" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -1693,7 +1735,7 @@
                                                         <asp:Label ID="Label140" runat="server" Text="Male"></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox136" runat="server" BackColor="#CCCCCC" ReadOnly="True" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox136" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -1769,7 +1811,7 @@
                                                         <asp:Label ID="Label148" runat="server" Text="Female"></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox144" runat="server" BackColor="#CCCCCC" ReadOnly="True" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox144" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -1846,7 +1888,7 @@
                                                         <asp:Label ID="Label156" runat="server" Text="Number of active beneficiaries served by PEPFAR programs for children and families affected by HIV/AIDS"></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox152" runat="server" BackColor="#CCCCCC" ReadOnly="True" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox152" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -1860,7 +1902,7 @@
                                                         <asp:Label ID="Label157" runat="server" Text="Male"></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox153" runat="server" BackColor="#CCCCCC" ReadOnly="True" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox153" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -1936,7 +1978,7 @@
                                                         <asp:Label ID="Label165" runat="server" Text="Female"></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox161" runat="server" BackColor="#CCCCCC" ReadOnly="True" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox161" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2014,7 +2056,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox169" runat="server" BackColor="#CCCCCC" ReadOnly="True" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox169" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2028,7 +2070,7 @@
                                                         <asp:Label ID="Label180" runat="server" Text="Male"></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox176" runat="server" BackColor="#CCCCCC" ReadOnly="True" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox176" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2097,7 +2139,7 @@
                                                         <asp:Label ID="Label181" runat="server" Text="Female"></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox177" runat="server" BackColor="#CCCCCC" ReadOnly="True" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox177" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2168,7 +2210,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox184" runat="server" BackColor="#CCCCCC" ReadOnly="True" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox184" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2230,7 +2272,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td> 
-                                                        <asp:TextBox ID="TextBox187" Width="52px" BackColor="#CCCCCC" ReadOnly="true"  runat="server"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox187" Width="52px" BackColor="#CCCCCC" ReadOnly="false"  runat="server"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2245,7 +2287,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox188" runat="server" BackColor="#CCCCCC" ReadOnly="true" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox188" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2319,7 +2361,7 @@
                                                         <asp:Label ID="Label196" runat="server" Text="Female"></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox195" runat="server" BackColor="#CCCCCC" ReadOnly="true" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox195" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2383,7 +2425,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox202" runat="server" BackColor="#CCCCCC" ReadOnly="true" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox202" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2398,7 +2440,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox203" runat="server" BackColor="#CCCCCC" ReadOnly="true" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox203" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2461,7 +2503,7 @@
                                                         <asp:Label ID="Label211" runat="server" Text="Female"></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox210" runat="server" BackColor="#CCCCCC" ReadOnly="true" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox210" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2550,7 +2592,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox219" runat="server" BackColor="#CCCCCC" ReadOnly="true" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox219" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2565,7 +2607,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox220" runat="server" BackColor="#CCCCCC" ReadOnly="true" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox220" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2628,7 +2670,7 @@
                                                         <asp:Label ID="Label228" runat="server" Text="Female"></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox227" runat="server" BackColor="#CCCCCC" ReadOnly="true" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox227" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2717,7 +2759,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox236" runat="server" BackColor="#CCCCCC" ReadOnly="true" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox236" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2732,7 +2774,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox237" runat="server" BackColor="#CCCCCC" ReadOnly="true" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox237" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2795,7 +2837,7 @@
                                                         <asp:Label ID="Label245" runat="server" Text="Female"></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox244" runat="server" BackColor="#CCCCCC" ReadOnly="true" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox244" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2901,7 +2943,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox253" runat="server" BackColor="#CCCCCC" ReadOnly="true" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox253" runat="server" BackColor="#CCCCCC" Width="52px"></asp:TextBox>
                                                         </td>
                                                 </tr>
                                             </table>
@@ -2917,7 +2959,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox254" runat="server" BackColor="#CCCCCC" ReadOnly="true" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox254" runat="server" BackColor="#CCCCCC" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2932,7 +2974,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox255" runat="server" BackColor="#CCCCCC" ReadOnly="true" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox255" runat="server" BackColor="#CCCCCC" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2954,15 +2996,15 @@
                                                </tr>
                                                <tr>
                                                    <td>
-                                                       <asp:TextBox ID="TextBox256" Width="52px" runat="server"></asp:TextBox>
+                                                       <asp:TextBox ID="TextBox256" Width="52px" runat="server" onKeyUp="sumUpPP1()"></asp:TextBox>
                                                    </td>
                                                    <td>
-                                                       <asp:TextBox ID="TextBox257" Width="52px" runat="server"></asp:TextBox>
+                                                       <asp:TextBox ID="TextBox257" Width="52px" runat="server" onKeyUp="sumUpPP1()"></asp:TextBox>
                                                    </td>
                                                    <td>
                                                          <asp:Panel ID="Panel33" runat="server" DefaultButton="Button33">
                                                             <asp:Button ID="Button33" runat="server" Text="Button" Style="display:none"  />
-                                                       <asp:TextBox ID="TextBox258" Width="52px" runat="server" AutoPostBack="False" OnTextChanged="TextBox258_TextChanged"></asp:TextBox>
+                                                       <asp:TextBox ID="TextBox258" Width="52px" runat="server" AutoPostBack="False" OnTextChanged="TextBox258_TextChanged" onKeyUp="sumUpPP1()"></asp:TextBox>
                                                     </asp:Panel>
                                                    </td>
                                                </tr>
@@ -2980,7 +3022,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox259" runat="server" BackColor="#CCCCCC" ReadOnly="true" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox259" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -3002,15 +3044,15 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox260" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox260" runat="server" Width="52px" onKeyUp="sumUpPP1()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox261" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox261" runat="server" Width="52px" onKeyUp="sumUpPP1()"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                           <asp:Panel ID="Panel34" runat="server" DefaultButton="Button34">
                                                             <asp:Button ID="Button34" runat="server" Text="Button" Style="display:none" OnClick="Button34_Click"  />
-                                                        <asp:TextBox ID="TextBox262" runat="server" Width="52px" AutoPostBack="False" OnTextChanged="TextBox262_TextChanged" style="height: 22px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox262" runat="server" Width="52px" AutoPostBack="False" OnTextChanged="TextBox262_TextChanged" style="height: 22px" onKeyUp="sumUpPP1()"></asp:TextBox>
                                                         </asp:Panel>
                                                     </td>
                                                 </tr>
@@ -3027,7 +3069,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox263" runat="server" BackColor="#CCCCCC" ReadOnly="true" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox263" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -3042,7 +3084,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox264" runat="server" BackColor="#CCCCCC" ReadOnly="true" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox264" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -3064,15 +3106,15 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox265" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox265" runat="server" Width="52px" onKeyUp="sumUpPP1()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox266" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox266" runat="server" Width="52px" onKeyUp="sumUpPP1()"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                           <asp:Panel ID="Panel35" runat="server" DefaultButton="Button35">
                                                             <asp:Button ID="Button35" runat="server" Text="Button" Style="display:none" OnClick="Button35_Click"  />
-                                                        <asp:TextBox ID="TextBox267" runat="server" Width="52px" AutoPostBack="False" OnTextChanged="TextBox267_TextChanged"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox267" runat="server" Width="52px" AutoPostBack="False" OnTextChanged="TextBox267_TextChanged" onKeyUp="sumUpPP1()"></asp:TextBox>
                                                         </asp:Panel>
                                                     </td>
                                                 </tr>
@@ -3089,7 +3131,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox268" runat="server" BackColor="#CCCCCC" ReadOnly="true" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox268" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -3111,15 +3153,15 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox269" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox269" runat="server" Width="52px" onKeyUp="sumUpPP1()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox270" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox270" runat="server" Width="52px" onKeyUp="sumUpPP1()"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                           <asp:Panel ID="Panel36" runat="server" DefaultButton="Button36">
                                                             <asp:Button ID="Button36" runat="server" Text="Button" Style="display:none" OnClick="Button36_Click"  />
-                                                        <asp:TextBox ID="TextBox271" runat="server" Width="52px" AutoPostBack="False" OnTextChanged="TextBox271_TextChanged"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox271" runat="server" Width="52px" AutoPostBack="False" OnTextChanged="TextBox271_TextChanged" onKeyUp="sumUpPP1()"></asp:TextBox>
                                                         </asp:Panel>
                                                     </td>
                                                 </tr>
@@ -3136,10 +3178,11 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox272" runat="server" BackColor="#CCCCCC" ReadOnly="true" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox272" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
+                                            <hr />
                                         </td>
                                     </tr>
                                     <tr>
@@ -3151,7 +3194,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox273" runat="server" BackColor="#CCCCCC" ReadOnly="true" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox273" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -3166,7 +3209,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox274" runat="server" BackColor="#CCCCCC" ReadOnly="true" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox274" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -3188,15 +3231,15 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox275" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox275" runat="server" Width="52px" onKeyUp="sumUpPP2()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox276" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox276" runat="server" Width="52px" onKeyUp="sumUpPP2()"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                           <asp:Panel ID="Panel37" runat="server" DefaultButton="Button37">
                                                             <asp:Button ID="Button37" runat="server" Text="Button" Style="display:none" OnClick="Button37_Click"  />
-                                                        <asp:TextBox ID="TextBox277" runat="server" Width="52px" AutoPostBack="False" OnTextChanged="TextBox277_TextChanged"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox277" runat="server" Width="52px" AutoPostBack="False" OnTextChanged="TextBox277_TextChanged" onKeyUp="sumUpPP2()"></asp:TextBox>
                                                         </asp:Panel>
                                                     </td>
                                                 </tr>
@@ -3213,7 +3256,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox278" runat="server" BackColor="#CCCCCC" ReadOnly="true" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox278" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -3235,15 +3278,15 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox279" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox279" runat="server" Width="52px" onKeyUp="sumUpPP2()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox280" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox280" runat="server" Width="52px" onKeyUp="sumUpPP2()"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                           <asp:Panel ID="Panel38" runat="server" DefaultButton="Button38">
                                                             <asp:Button ID="Button38" runat="server" Text="Button" Style="display:none" OnClick="Button38_Click"  />
-                                                        <asp:TextBox ID="TextBox281" runat="server" Width="52px" AutoPostBack="False" OnTextChanged="TextBox281_TextChanged"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox281" runat="server" Width="52px" AutoPostBack="False" OnTextChanged="TextBox281_TextChanged" onKeyUp="sumUpPP2()"></asp:TextBox>
                                                         </asp:Panel>
                                                     </td>
                                                 </tr>
@@ -3260,7 +3303,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox282" runat="server" BackColor="#CCCCCC" ReadOnly="true" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox282" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -3275,7 +3318,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox283" runat="server" BackColor="#CCCCCC" ReadOnly="true" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox283" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -3297,15 +3340,15 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox284" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox284" runat="server" Width="52px" onKeyUp="sumUpPP2()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox285" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox285" runat="server" Width="52px" onKeyUp="sumUpPP2()"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                           <asp:Panel ID="Panel39" runat="server" DefaultButton="Button39">
                                                             <asp:Button ID="Button39" runat="server" Text="Button" Style="display:none" OnClick="Button39_Click"  />
-                                                        <asp:TextBox ID="TextBox286" runat="server" Width="52px" AutoPostBack="False" OnTextChanged="TextBox286_TextChanged"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox286" runat="server" Width="52px" AutoPostBack="False" OnTextChanged="TextBox286_TextChanged" onKeyUp="sumUpPP2()"></asp:TextBox>
                                                         </asp:Panel>
                                                     </td>
                                                 </tr>
@@ -3322,7 +3365,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox287" runat="server" BackColor="#CCCCCC" ReadOnly="true" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox287" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -3344,15 +3387,15 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox288" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox288" runat="server" Width="52px" onKeyUp="sumUpPP2()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox289" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox289" runat="server" Width="52px" onKeyUp="sumUpPP2()"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                           <asp:Panel ID="Panel40" runat="server" DefaultButton="Button40">
                                                             <asp:Button ID="Button40" runat="server" Text="Button" Style="display:none"  />
-                                                        <asp:TextBox ID="TextBox290" runat="server" Width="52px" AutoPostBack="False" OnTextChanged="TextBox290_TextChanged"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox290" runat="server" Width="52px" AutoPostBack="False" OnTextChanged="TextBox290_TextChanged" onKeyUp="sumUpPP2()"></asp:TextBox>
                                                         </asp:Panel>
                                                     </td>
                                                 </tr>
@@ -3369,7 +3412,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox291" runat="server" BackColor="#CCCCCC" ReadOnly="true" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox291" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -3392,16 +3435,16 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <asp:TextBox ID="TextBox292" runat="server" Width="52px"></asp:TextBox>
+                                                            <asp:TextBox ID="TextBox292" runat="server" Width="52px" onKeyUp="sumUpPP3()"></asp:TextBox>
                                                         </td>
                                                         <td>
-                                                            <asp:TextBox ID="TextBox293" runat="server"  Width="52px"></asp:TextBox>
+                                                            <asp:TextBox ID="TextBox293" runat="server"  Width="52px" onKeyUp="sumUpPP3()"></asp:TextBox>
                                                         </td>
                                                     
                                                         <td>
                                                               <asp:Panel ID="Panel41" runat="server" DefaultButton="Button41">
                                                             <asp:Button ID="Button41" runat="server" Text="Button" Style="display:none" OnClick="Button41_Click"  />
-                                                            <asp:TextBox ID="TextBox294" runat="server" Width="52px" AutoPostBack="False" OnTextChanged="TextBox294_TextChanged"></asp:TextBox>
+                                                            <asp:TextBox ID="TextBox294" runat="server" Width="52px" AutoPostBack="False" OnTextChanged="TextBox294_TextChanged" onKeyUp="sumUpPP3()"></asp:TextBox>
                                                             </asp:Panel>
                                                         </td>
                                                         
@@ -3420,7 +3463,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox295" runat="server" BackColor="#CCCCCC" ReadOnly="true" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox295" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -3456,24 +3499,24 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <asp:TextBox ID="TextBox296" runat="server" Width="52px"></asp:TextBox>
+                                                            <asp:TextBox ID="TextBox296" runat="server" Width="52px" onKeyUp="sumUpPP4()"></asp:TextBox>
                                                         </td>
                                                         <td>
-                                                            <asp:TextBox ID="TextBox297" runat="server" Width="52px"></asp:TextBox>
+                                                            <asp:TextBox ID="TextBox297" runat="server" Width="52px" onKeyUp="sumUpPP4()"></asp:TextBox>
                                                         </td>
                                                         <td>
-                                                            <asp:TextBox ID="TextBox298" runat="server" Width="52px"></asp:TextBox>
+                                                            <asp:TextBox ID="TextBox298" runat="server" Width="52px" onKeyUp="sumUpPP4()"></asp:TextBox>
                                                         </td>
                                                         <td>
-                                                            <asp:TextBox ID="TextBox299" runat="server" Width="52px"></asp:TextBox>
+                                                            <asp:TextBox ID="TextBox299" runat="server" Width="52px" onKeyUp="sumUpPP4()"></asp:TextBox>
                                                         </td>
                                                         <td>
-                                                            <asp:TextBox ID="TextBox300" runat="server" Width="52px"></asp:TextBox>
+                                                            <asp:TextBox ID="TextBox300" runat="server" Width="52px" onKeyUp="sumUpPP4()"></asp:TextBox>
                                                         </td>
                                                         <td>
                                                               <asp:Panel ID="Panel42" runat="server" DefaultButton="Button42">
                                                             <asp:Button ID="Button42" runat="server" Text="Button" Style="display:none" OnClick="Button42_Click"  />
-                                                            <asp:TextBox ID="TextBox301" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox301_TextChanged"></asp:TextBox>
+                                                            <asp:TextBox ID="TextBox301" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox301_TextChanged" onKeyUp="sumUpPP4()"></asp:TextBox>
                                                             </asp:Panel>
                                                         </td>
                                                     </tr>
@@ -3506,7 +3549,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox303" runat="server" BackColor="#CCCCCC" ReadOnly="true" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox303" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -3526,12 +3569,12 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <asp:TextBox ID="TextBox304" runat="server" Width="52px" OnTextChanged="TextBox304_TextChanged"></asp:TextBox>
+                                                            <asp:TextBox ID="TextBox304" runat="server" Width="52px" OnTextChanged="TextBox304_TextChanged" onKeyUp="sumUpPP5()"></asp:TextBox>
                                                         </td>
                                                         <td>
                                                           <asp:Panel ID="Panel43" runat="server" DefaultButton="Button43">
                                                             <asp:Button ID="Button43" runat="server" Text="Button" Style="display:none" OnClick="Button43_Click"  />
-                                                            <asp:TextBox ID="TextBox796" runat="server" AutoPostBack="False" OnTextChanged="TextBox304_TextChanged" Width="52px"></asp:TextBox>
+                                                            <asp:TextBox ID="TextBox796" runat="server" AutoPostBack="False" OnTextChanged="TextBox304_TextChanged" Width="52px" onKeyUp="sumUpPP5()"></asp:TextBox>
                                                             </asp:Panel>
                                                         </td>
                                                     </tr>
@@ -3562,7 +3605,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox306" runat="server" BackColor="#CCCCCC" ReadOnly="true" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox306" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -3582,10 +3625,10 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <asp:TextBox ID="TextBox316" runat="server" BackColor="#CCCCCC" ReadOnly="True" Width="52px"></asp:TextBox>
+                                                            <asp:TextBox ID="TextBox316" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                         </td>
                                                         <td>
-                                                            <asp:TextBox ID="TextBox317" runat="server" BackColor="#CCCCCC" ReadOnly="True" Width="52px"></asp:TextBox>
+                                                            <asp:TextBox ID="TextBox317" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -3602,7 +3645,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox318" runat="server" BackColor="#CCCCCC" ReadOnly="True" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox318" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -3645,7 +3688,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox321" runat="server" BackColor="#CCCCCC" ReadOnly="True" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox321" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -3688,7 +3731,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox324" runat="server" BackColor="#CCCCCC" ReadOnly="True" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox324" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -3731,7 +3774,7 @@
 "></asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox327" runat="server" BackColor="#CCCCCC" ReadOnly="True" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox327" runat="server" BackColor="#CCCCCC" ReadOnly="false" Width="52px"></asp:TextBox>
                                                     </td>
                                                 </tr>
                                             </table>

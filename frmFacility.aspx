@@ -68,7 +68,7 @@
                     </td></tr><tr><td class="style6" nowrap="nowrap">Technical Area :</td><td>
                     <asp:DropDownList ID="DrpTechArea" runat="server" Width="130pt" 
                         AppendDataBoundItems="True"><asp:ListItem></asp:ListItem><asp:ListItem>Care and Treatment</asp:ListItem><asp:ListItem>PMTCT</asp:ListItem><asp:ListItem>HCT</asp:ListItem><asp:ListItem>ALL</asp:ListItem></asp:DropDownList>
-                    <asp:TextBox ID="TextBox7" runat="server" BorderColor="#FFFFCC" ReadOnly="True" 
+                    <asp:TextBox ID="TextBox7" runat="server" BorderColor="#FFFFCC" ReadOnly="false" 
                         Visible="False"></asp:TextBox>
                     </td></tr><tr><td class="td" colspan="2"><asp:ImageButton ID="ImageButton1" runat="server" 
                                             ImageUrl="~/image/Submit.png" 

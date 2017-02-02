@@ -276,7 +276,7 @@
                                     <td class="auto-style13">
                                         <asp:Label ID="Label19" runat="server" Font-Bold="True" Font-Size="Small" Text="Number of pregnant women with known HIV status (includes women who tested for HIV and received their results)
 "></asp:Label>
-                                        <asp:TextBox ID="TextBox16" runat="server" BorderColor="#CCCCCC" ReadOnly="True" style="margin-top: 0px" Width="52px"></asp:TextBox>
+                                        <asp:TextBox ID="TextBox16" runat="server" BorderColor="#CCCCCC" ReadOnly="false" style="margin-top: 0px" Width="52px"></asp:TextBox>
                                         <hr />
                                     </td>
                                 </tr>
@@ -381,7 +381,7 @@
                                     <td class="auto-style13">
                                         <asp:Label ID="Label32" runat="server" Font-Size="Small" Text="Number of women attending labour and delivery (L&amp;D) who were tested for HIV and received their results (also a subset of #P11.1D)
 "></asp:Label>
-                                        <asp:TextBox ID="TextBox27" runat="server" BorderColor="#CCCCCC" ReadOnly="True" style="margin-top: 0px" Width="52px"></asp:TextBox>
+                                        <asp:TextBox ID="TextBox27" runat="server" BorderColor="#CCCCCC" ReadOnly="false" style="margin-top: 0px" Width="52px"></asp:TextBox>
                                         <hr />
                                     </td>
                                 </tr>

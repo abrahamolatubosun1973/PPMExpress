@@ -259,7 +259,7 @@
                                             <ContentTemplate>
                                             <asp:DropDownList ID="drpThematic" runat="server" AutoPostBack="True" Width="198px" OnSelectedIndexChanged="drpThematic_SelectedIndexChanged" >
                                             </asp:DropDownList>
-                                            <asp:TextBox ID="TextBox798" runat="server" BorderColor="#CCCCCC" ReadOnly="True" Width="95px" style="color: #FF0000" Visible="False"></asp:TextBox>
+                                            <asp:TextBox ID="TextBox798" runat="server" BorderColor="#CCCCCC" ReadOnly="false" Width="95px" style="color: #FF0000" Visible="False"></asp:TextBox>
                                             <asp:Label ID="lblmsg5" runat="server" style="color: #FF0000">*</asp:Label>
                                             </ContentTemplate>
                                             </asp:UpdatePanel>

@@ -112,12 +112,18 @@ public partial class DataEntryForm : System.Web.UI.Page
                     TextBox3.Focus();
                     break;
                 case "FN":
+                    CLS_FN();
+                    EDIT_FN();
                     MultiView1.SetActiveView(View2);
                     break;
                 case "PP":
+                    CLS_PP();
+                    EDIT_PP();
                     MultiView1.SetActiveView(View3);
                     break;
                 case "PEP":
+                    CLS_PEP();
+                    EDIT_PEP();
                     MultiView1.SetActiveView(View4);
                     break;
                
@@ -1592,7 +1598,8 @@ public partial class DataEntryForm : System.Web.UI.Page
     {
         try
         {
-            string SQL1 = "SELECT * FROM tbl_PP Where months ='" + mMnth + "' and years ='" + mYr + "' and grouptype ='" + mChoose + "' and facname ='" + mFacility + "'";
+
+            string SQL1 = "SELECT * FROM tbl_PP Where months ='" + FindTable.GetMonths(mMnth) + "' and years ='" + mYr + "' and grouptype ='" + mChoose + "' and facname ='" + mFacility + "'";
 
             SqlConnection cn = new SqlConnection(ConnectAll.ConnectMe());
             cn.Open();
@@ -1649,7 +1656,7 @@ public partial class DataEntryForm : System.Web.UI.Page
                 TextBox298.Text = r["G4MA"].ToString();
                 TextBox299.Text = r["G4FE"].ToString();
                 TextBox300.Text = r["G4MSM_TG"].ToString();
-                TextBox301.Text = r["G4MSM_TG_SEXW"].ToString();
+                TextBox301.Text = r["G4MSM_TG_SEXWRK"].ToString();
                 TextBox302.Text = r["G4OTHER"].ToString();
                 TextBox303.Text = r["TOTALG5"].ToString();
                 TextBox304.Text = r["G5MA"].ToString();
@@ -1672,7 +1679,7 @@ public partial class DataEntryForm : System.Web.UI.Page
     {
         if (!string.IsNullOrEmpty(Session["Edit"].ToString()))
         {
-            if (Session["Edit"] == "T")
+            if (Session["Edit"].ToString() == "T")
             {
                 //================ UPDATE EXISTING RECORD =================
                 string sql = "UPDATE tbl_PP SET states=@states,lga=@lga,facname=@facname,months=@months,years=@years,grouptype=@grouptype,TOTALG1=@TOTALG1, SCHL_BASEDG1=@SCHL_BASEDG1,";
@@ -1692,7 +1699,7 @@ public partial class DataEntryForm : System.Web.UI.Page
                     mState = (string)Session["mstate"];
                     mLGA = (string)Session["mLga"];
                     mFacility = (string)Session["mFacility"];
-                    mMnth = (string)Session["mMnth"];
+                    Int32 mMnth = FindTable.GetMonths(Session["mMnth"].ToString());
                     mYr = (string)Session["mYr"];
                     mFile = (string)Session["mFile"];
                     mChoose = (string)Session["mChoose"];
@@ -1754,7 +1761,7 @@ public partial class DataEntryForm : System.Web.UI.Page
                     cmd.Parameters.AddWithValue("@G4MA", SqlDbType.Int).Value = TextBox298.Text;
                     cmd.Parameters.AddWithValue("@G4FE", SqlDbType.Int).Value = TextBox299.Text;
                     cmd.Parameters.AddWithValue("@G4MSM_TG", SqlDbType.Int).Value = TextBox300.Text;
-                    cmd.Parameters.AddWithValue("@G4MSM_TG_SEXW", SqlDbType.Int).Value = TextBox301.Text;
+                    cmd.Parameters.AddWithValue("@G4MSM_TG_SEXWRK", SqlDbType.Int).Value = TextBox301.Text;
                     cmd.Parameters.AddWithValue("@G4OTHER", SqlDbType.Int).Value = TextBox302.Text;
                     cmd.Parameters.AddWithValue("@TOTALG5", SqlDbType.Int).Value = TextBox303.Text;
                     cmd.Parameters.AddWithValue("@G5MA", SqlDbType.Int).Value = TextBox304.Text;
@@ -1763,9 +1770,9 @@ public partial class DataEntryForm : System.Web.UI.Page
                     if (Rowsaffected != -1)
                     {
                         webMessage.Show(Rowsaffected.ToString() + "'Update Successful");
-                        return;
+                        CLS_PP();
                     }
-                    CLS_PP();
+                    
                     cn.Close();
 
                 }
@@ -1779,7 +1786,15 @@ public partial class DataEntryForm : System.Web.UI.Page
             else
             {
                 //===================== INSERT NEW RECORD ====================
-                string sql = "INSERT INTO tbl_PP VALUES (@states,@lga,@facname,@months,@years,@gouptype,@TOTALG1, @SCHL_BASEDG1,";
+                string sql = "INSERT INTO tbl_PP (states,lga,facname,months,years,grouptype,TOTALG1, SCHL_BASEDG1,";
+                sql += " SB_SUBG1MA, SB_G1MA10_14, SB_G1MA15_19,SB_G1MA20_49, SB_SUBG1FE, SB_G1FE10_14,  SB_G1FE15_19, SB_G1FE20_49,";
+                sql += "COMM_BASEDG1, CB_SUBG1MA, CB_G1MA10_14, CB_G1MA15_19, CB_G1MA20_49,";
+                sql += "CB_SUBG1FE, CB_G1FE10_14, CB_G1FE15_19, CB_G1FE20_49, TOTALG2, SCHL_BASEDG2,";
+                sql += "SB_SUBG2MA, SB_G2MA10_14, SB_G2MA15_19, SB_G2MA20_49, SB_SUBG2FE, SB_G2FE10_14,";
+                sql += "SB_G2FE15_19, SB_G2FE20_49, COMM_BASEDG2, CB_SUBG2MA, CB_G2MA10_14, CB_G2MA15_19,";
+                sql += "CB_G2MA20_49, CB_SUBG2FE, CB_G2FE10_14, CB_G2FE15_19, CB_G2FE20_49, TOTALG3, G3MA,";
+                sql += "G3FE, KPG3, TOTALG4, G4FSW, G4PWID, G4MA, G4FE, G4MSM_TG, G4MSM_TG_SEXWRK, G4OTHER,TOTALG5, G5MA, G5FE)";
+                sql += " VALUES (@states,@lga,@facname,@months,@years,@grouptype,@TOTALG1, @SCHL_BASEDG1,";
                 sql += " @SB_SUBG1MA, @SB_G1MA10_14, @SB_G1MA15_19,@SB_G1MA20_49, @SB_SUBG1FE, @SB_G1FE10_14,  @SB_G1FE15_19, @SB_G1FE20_49,";
                 sql += "@COMM_BASEDG1, @CB_SUBG1MA, @CB_G1MA10_14, @CB_G1MA15_19, @CB_G1MA20_49,";
                 sql += "@CB_SUBG1FE, @CB_G1FE10_14, @CB_G1FE15_19, @CB_G1FE20_49, @TOTALG2, @SCHL_BASEDG2,";
@@ -1796,7 +1811,7 @@ public partial class DataEntryForm : System.Web.UI.Page
                     mState = (string)Session["mstate"];
                     mLGA = (string)Session["mLga"];
                     mFacility = (string)Session["mFacility"];
-                    mMnth = (string)Session["mMnth"];
+                    Int32 mMnth = FindTable.GetMonths(Session["mMnth"].ToString());
                     mYr = (string)Session["mYr"];
                     mFile = (string)Session["mFile"];
                     mChoose = (string)Session["mChoose"];
@@ -1858,7 +1873,7 @@ public partial class DataEntryForm : System.Web.UI.Page
                     cmd.Parameters.AddWithValue("@G4MA", SqlDbType.Int).Value = TextBox298.Text;
                     cmd.Parameters.AddWithValue("@G4FE", SqlDbType.Int).Value = TextBox299.Text;
                     cmd.Parameters.AddWithValue("@G4MSM_TG", SqlDbType.Int).Value = TextBox300.Text;
-                    cmd.Parameters.AddWithValue("@G4MSM_TG_SEXW", SqlDbType.Int).Value = TextBox301.Text;
+                    cmd.Parameters.AddWithValue("@G4MSM_TG_SEXWRK", SqlDbType.Int).Value = TextBox301.Text;
                     cmd.Parameters.AddWithValue("@G4OTHER", SqlDbType.Int).Value = TextBox302.Text;
                     cmd.Parameters.AddWithValue("@TOTALG5", SqlDbType.Int).Value = TextBox303.Text;
                     cmd.Parameters.AddWithValue("@G5MA", SqlDbType.Int).Value = TextBox304.Text;
@@ -1867,7 +1882,7 @@ public partial class DataEntryForm : System.Web.UI.Page
                     if (Rowsaffected != -1)
                     {
                         webMessage.Show(Rowsaffected.ToString() + "' Successful");
-                        return;
+                        CLS_PP();
                     }
                     CLS_PP();
                     cn.Close();
