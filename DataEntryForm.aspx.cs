@@ -1193,7 +1193,7 @@ public partial class DataEntryForm : System.Web.UI.Page
     {
         try
         {
-            string SQL1 = "SELECT * FROM tbl_FN Where months ='" + mMnth + "' and years ='" + mYr + "' and grouptype ='" + mChoose + "' and facname ='" + mFacility + "'";
+            string SQL1 = "SELECT * FROM tbl_FN Where months ='" + FindTable.GetMonths(mMnth) + "' and years ='" + mYr + "' and grouptype ='" + mChoose + "' and facname ='" + mFacility + "'";
 
             SqlConnection cn = new SqlConnection(ConnectAll.ConnectMe());
             cn.Open();
@@ -1283,17 +1283,17 @@ public partial class DataEntryForm : System.Web.UI.Page
     {
         if(! string.IsNullOrEmpty(Session["Edit"].ToString()))
         {
-            if(Session["Edit"] =="T")
+            if(Session["Edit"].ToString() =="T")
             {
                 //================= UPDATE =============
                 string sql = "UPDATE tbl_FN SET states=@states,lga=@lga,facname=@facname,months=@months,years=@years,grouptype=@grouptype,TOTALG1=@TOTALG1, SUBG1MA=@SUBG1MA,";
                 sql += " G1MA1=@G1MA1, G1MA1_4=@G1MA1_4, G1MA5_9=@G1MA5_9, G1MA10_14=@G1MA10_14,G1MA15_18=@G1MA15_18, G1MA18=@G1MA18, SUBG1FE=@SUBG1FE, G1FE1=@G1FE1, G1FE1_4=@G1FE1_4, G1FE5_9=@G1FE5_9, G1FE10_14=@G1FE10_14, G1FE15_18=@G1FE15_18, G1FE18=@G1FE18,";
-                sql += "TOTALG2=@TOTALG2, SUBG2MA=@SUBG2MA, G2MA1=@G2MA1, G2MA1_4=@G2MA1_4, G2MA5_9=@G2MA5_9, G2MA10_14=@G2MA10_14, G2MA15_18=@G2MA15_18, G2MA18=@G2MA18, SUBG2FE=@SUBG2FE, G2FE1=@G2FE1";
+                sql += "TOTALG2=@TOTALG2, SUBG2MA=@SUBG2MA, G2MA1=@G2MA1, G2MA1_4=@G2MA1_4, G2MA5_9=@G2MA5_9, G2MA10_14=@G2MA10_14, G2MA15_18=@G2MA15_18, G2MA18=@G2MA18, SUBG2FE=@SUBG2FE, G2FE1=@G2FE1,";
                 sql += "G2FE1_4=@G2FE1_4, G2FE5_9=@G2FE5_9, G2FE10_14=@G2FE10_14, G2FE15_18=@G2FE15_18, G2FE18=@G2FE18, PREGNANTG2=@PREGNANTG2, POSTPARTUMG2=@POSTPARTUMG2, TOTALG3=@TOTALG3,";
                 sql += "SUBG3MA=@SUBG3MA, G3MA1=@G3MA1, G3MA1_4=@G3MA1_4, G3MA5_9=@G3MA5_9, G3MA10_14=@G3MA10_14, G3MA15_18=@G3MA15_18, G3MA18=@G3MA18, SUBG3FE=@SUBG3FE, G3FE1=@G3FE1, G3FE1_4=@G3FE1_4,";
                 sql += "G3FE5_9=@G3FE5_9, G3FE10_14=@G3FE10_14, G3FE15_18=@G3FE15_18, G3FE18=@G3FE18, PREGNANTG3=@PREGNANTG3, POSTPARTUMG3=@POSTPARTUMG3, TOTALG4=@TOTALG4, SUBG4MA=@SUBG4MA, G4MA1=@G4MA1,";
                 sql += "G4MA1_4=@G4MA1_4, G4MA5_9=@G4MA5_9, G4MA10_14=@G4MA10_14, G4MA15_18=@G4MA15_18, G4MA18=@G4MA18, SUBG4FE=@SUBG4FE, G4FE1=@G4FE1, G4FE1_4=@G4FE1_4, G4FE5_9=@G4FE5_9, G4FE10_14=@G4FE10_14,";
-                sql += "G4FE15_18=@G4FE15_18, G4FE18=@G4FE18, PREGNANTG4=@PREGNANTG4, @POSTPARTUMG4=POSTPARTUMG4";
+                sql += "G4FE15_18=@G4FE15_18, G4FE18=@G4FE18, PREGNANTG4=@PREGNANTG4, POSTPARTUMG4=@POSTPARTUMG4";
                 sql += " WHERE states=@states AND lga=@lga AND facname=@facname AND months=@months AND years=@years AND grouptype=@grouptype ";
                 SqlConnection cn = new SqlConnection(ConnectAll.ConnectMe());
                 try
@@ -1302,7 +1302,7 @@ public partial class DataEntryForm : System.Web.UI.Page
                     mState = (string)Session["mstate"];
                     mLGA = (string)Session["mLga"];
                     mFacility = (string)Session["mFacility"];
-                    mMnth = (string)Session["mMnth"];
+                    Int32 mMnth = FindTable.GetMonths(Session["mMnth"].ToString());
                     mYr = (string)Session["mYr"];
                     mFile = (string)Session["mFile"];
                     mChoose = (string)Session["mChoose"];
@@ -1386,9 +1386,9 @@ public partial class DataEntryForm : System.Web.UI.Page
                     if (Rowsaffected != -1)
                     {
                         webMessage.Show(Rowsaffected.ToString() + "'Update Successful");
-                        return;
+                        CLS_FN();
                     }
-                    CLS_FN();
+                   
                 }
                 catch (Exception ex)
                 {
@@ -1399,16 +1399,16 @@ public partial class DataEntryForm : System.Web.UI.Page
             else
             {
                 //============= INSERT ==================
-                string sql = "INSERT INTO tbl_FN (states ,lga ,facname ,months ,year ,grouptyp ,TOTALG1 , SUBG1MA ,";
+                string sql = "INSERT INTO tbl_FN (states ,lga ,facname ,months ,years ,grouptype ,TOTALG1 , SUBG1MA ,";
                 sql += " G1MA1 , G1MA1_4 , G1MA5_9 , G1MA10_14 ,G1MA15_18 , G1MA18 , SUBG1FE , G1FE1 , G1FE1_4 , G1FE5_9 , G1FE10_14 , G1FE15_1 , G1FE18 ,";
-                sql += "TOTALG2 , SUBG2MA , G2MA1 , G2MA1_4 , G2MA5_9 , G2MA10_14 , G2MA15_18 , G2MA18 , SUBG2FE , G2FE1 ";
+                sql += "TOTALG2 , SUBG2MA , G2MA1 , G2MA1_4 , G2MA5_9 , G2MA10_14 , G2MA15_18 , G2MA18 , SUBG2FE , G2FE1, ";
                 sql += "G2FE1_4 , G2FE5_9 , G2FE10_14 , G2FE15_18 , G2FE18 , PREGNANTG2 , POSTPARTUMG2 , TOTALG3 ,";
                 sql += "SUBG3MA , G3MA1 , G3MA1_4 , G3MA5_9 , G3MA10_14 , G3MA15_18 , G3MA18 , SUBG3FE , G3FE1 , G3FE1_4 ,";
                 sql += "G3FE5_9 , G3FE10_14 , G3FE15_18 , G3FE18 , PREGNANTG3 , POSTPARTUMG3 , TOTALG4 , SUBG4MA , G4MA1 ,";
                 sql += "G4MA1_4 , G4MA5_9 , G4MA10_14 , G4MA15_18 , G4MA18 , SUBG4FE , G4FE1 , G4FE1_4 , G4FE5_9 , G4FE10_14 ,";
-                sql += "G4FE15_18 , G4FE18 , PREGNANTG4 , @POSTPARTUMG4  VALUES(@states,@lga,@facname,@months,@years,@grouptype,@TOTALG1, @SUBG1MA, ";
+                sql += "G4FE15_18 , G4FE18 , PREGNANTG4 , POSTPARTUMG4 ) VALUES(@states,@lga,@facname,@months,@years,@grouptype,@TOTALG1, @SUBG1MA, ";
                 sql += "@G1MA1, @G1MA1_4, @G1MA5_9, @G1MA10_14,@G1MA15_18, @G1MA18, @SUBG1FE, @G1FE1, @G1FE1_4, @G1FE5_9, @G1FE10_14, @G1FE15_18, @G1FE18,";
-                sql += "@TOTALG2, @SUBG2MA, @G2MA1, @G2MA1_4, @G2MA5_9, @G2MA10_14, @G2MA15_18, @G2MA18, @SUBG2FE, @G2FE1";
+                sql += "@TOTALG2, @SUBG2MA, @G2MA1, @G2MA1_4, @G2MA5_9, @G2MA10_14, @G2MA15_18, @G2MA18, @SUBG2FE, @G2FE1,";
                 sql += "@G2FE1_4, @G2FE5_9, @G2FE10_14, @G2FE15_18, @G2FE18, @PREGNANTG2, @POSTPARTUMG2, @TOTALG3,";
                 sql += "@SUBG3MA, @G3MA1, @G3MA1_4, @G3MA5_9, @G3MA10_14, @G3MA15_18, @G3MA18, @SUBG3FE, @G3FE1, @G3FE1_4,";
                 sql += "@G3FE5_9, @G3FE10_14, @G3FE15_18, @G3FE18, @PREGNANTG3, @POSTPARTUMG3, @TOTALG4, @SUBG4MA, @G4MA1,";
@@ -1422,7 +1422,7 @@ public partial class DataEntryForm : System.Web.UI.Page
                     mState = (string)Session["mstate"];
                     mLGA = (string)Session["mLga"];
                     mFacility = (string)Session["mFacility"];
-                    mMnth = (string)Session["mMnth"];
+                    Int32 mMnth = FindTable.GetMonths(Session["mMnth"].ToString());
                     mYr = (string)Session["mYr"];
                     mFile = (string)Session["mFile"];
                     mChoose = (string)Session["mChoose"];
@@ -1506,14 +1506,14 @@ public partial class DataEntryForm : System.Web.UI.Page
                     if (Rowsaffected != -1)
                     {
                       webMessage.Show( Rowsaffected.ToString() + "' Successful");
-                        return;
+                      CLS_FN();
                     }
-                    CLS_FN();
+                    
                 }
                 catch (Exception ex)
                 {
                     webMessage.Show("ERROR "+ ex.Message.ToString());
-                    return;
+                    
                 }
 
             }
@@ -2023,9 +2023,10 @@ public partial class DataEntryForm : System.Web.UI.Page
             if(Session["Edit"] =="T")
             {
                 //============= UPDATE RECORDS ==========
-                string sql = "UPDATE tbl_PEP SET states=@states,lga=@lga,facname=@facname,months=@months,@years,grouptype=@grouptype,TOTALG1=@TOTALG1, G1MA=@G1MA, G1FE=@G1FE, TOTALG2=@TOTALG2, G2MA=@G2MA, G2FE=@G2FE,";
-                sql += "TOTALG3=@TOTALG3, G3MA=@G3MA, G3FE=@G3FE, TOTALG4=@TOTALG4, G4MA=@G4MA, G4FE=@G4FE, TOTALG5=@TOTALG5, G5MA=@G5MA, G5FE=@G5FE";
-                sql += " WHERE states=@states AND lga=@lga AND facname=@facname AND months=@months AND years=@years AND grouptype=@grouptype";
+                string sql = "UPDATE tbl_PEP SET states=@states,lga=@lga,facname=@facname,months=@months,years=@years,grouptype=@grouptype,TOTALG1=@TOTALG1, ";
+                sql += "G1MA=@G1MA, G1FE=@G1FE, TOTALG2=@TOTALG2, G2MA=@G2MA, G2FE=@G2FE,TOTALG3=@TOTALG3, G3MA=@G3MA, G3FE=@G3FE, TOTALG4=@TOTALG4, G4MA=@G4MA,";
+                sql += "G4FE=@G4FE, TOTALG5=@TOTALG5, G5MA=@G5MA, G5FE=@G5FE WHERE states=@states AND lga=@lga AND facname=@facname AND months=@months AND years=@years";
+                sql += " AND grouptype=@grouptype";
                 
                 SqlConnection cn = new SqlConnection(ConnectAll.ConnectMe());
                 try
@@ -2058,9 +2059,9 @@ public partial class DataEntryForm : System.Web.UI.Page
                     if (Rowsaffected != -1)
                     {
                         webMessage.Show(Rowsaffected.ToString() + "' Successful");
-                        return;
+                        CLS_PEP();
                     }
-                    CLS_PEP();
+                    
                 }
                 catch (Exception ex)
                 {

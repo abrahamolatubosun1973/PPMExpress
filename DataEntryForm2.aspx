@@ -2,15 +2,49 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
       <script type="text/javascript">
+          <%-- Row 1 --%>
+          function sumUp1() {
+              document.getElementById('<%=TextBox2.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox3.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox4.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox5.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox6.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox7.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox8.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox9.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox10.ClientID%>').value);
+              document.getElementById('<%=TextBox11.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox12.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox13.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox14.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox15.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox16.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox17.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox18.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox19.ClientID%>').value);
+              document.getElementById('<%=TextBox1.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox2.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox11.ClientID%>').value)
+          }
 
-//     function stopRKey(evt) {
-//         var evt = (evt) ? evt : ((event) ? event : null);
-//         var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
-//         if ((evt.keyCode == 13) && (node.type == "text")) { return false; }
-//     }
-
-//     document.onkeypress = stopRKey;
-
+           <%-- Row 2 --%>
+          function sumUp2() {
+              document.getElementById('<%=TextBox21.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox22.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox23.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox24.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox25.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox26.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox27.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox28.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox29.ClientID%>').value);
+              document.getElementById('<%=TextBox30.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox31.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox32.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox33.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox34.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox35.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox36.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox37.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox38.ClientID%>').value);
+              document.getElementById('<%=TextBox20.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox22.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox30.ClientID%>').value)
+          }
+            <%-- Row 3 --%>
+          function sumUp3() {
+              document.getElementById('<%=TextBox40.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox41.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox42.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox43.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox44.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox45.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox46.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox47.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox48.ClientID%>').value);
+              document.getElementById('<%=TextBox49.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox50.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox51.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox52.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox53.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox54.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox55.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox56.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox57.ClientID%>').value);
+              document.getElementById('<%=TextBox39.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox40.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox49.ClientID%>').value)
+          }
+           <%-- Row 4 --%>
+          function sumUp4() {
+              document.getElementById('<%=TextBox59.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox60.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox61.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox62.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox63.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox64.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox65.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox66.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox67.ClientID%>').value);
+              document.getElementById('<%=TextBox68.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox69.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox70.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox71.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox72.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox73.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox74.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox75.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox76.ClientID%>').value);
+              document.getElementById('<%=TextBox58.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox59.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox68.ClientID%>').value)
+          }
+           <%-- Row 5 --%>
+          function sumUp5() {
+              document.getElementById('<%=TextBox78.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox79.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox80.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox81.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox82.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox83.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox84.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox85.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox86.ClientID%>').value);
+              document.getElementById('<%=TextBox87.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox88.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox89.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox90.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox91.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox92.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox93.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox94.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox95.ClientID%>').value);
+              document.getElementById('<%=TextBox77.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox78.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox87.ClientID%>').value)
+          }
+           <%-- Row 6 --%>
+          function sumUp6() {
+              document.getElementById('<%=TextBox97.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox98.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox99.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox100.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox101.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox102.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox103.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox104.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox105.ClientID%>').value);
+              document.getElementById('<%=TextBox106.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox107.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox108.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox109.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox110.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox111.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox112.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox113.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox114.ClientID%>').value);
+              document.getElementById('<%=TextBox96.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox97.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox106.ClientID%>').value)
+          }
+            <%-- Row 7 --%>
+          function sumUp7() {
+              document.getElementById('<%=TextBox116.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox117.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox118.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox119.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox120.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox121.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox122.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox123.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox124.ClientID%>').value);
+              document.getElementById('<%=TextBox125.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox126.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox127.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox128.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox129.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox130.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox131.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox132.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox133.ClientID%>').value);
+              document.getElementById('<%=TextBox115.ClientID%>').value = parseFloat(document.getElementById('<%=TextBox116.ClientID%>').value) + parseFloat(document.getElementById('<%=TextBox125.ClientID%>').value)
+          }
 </script> 
        <style type="text/css">
          .auto-style42 {
@@ -216,30 +250,30 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox3" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox3" runat="server" Width="52px" onKeyUp="sumUp1()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox4" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox4" runat="server" Width="52px" onKeyUp="sumUp1()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox5" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox5" runat="server" Width="52px" onKeyUp="sumUp1()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox6" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox6" runat="server" Width="52px" onKeyUp="sumUp1()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox7" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox7" runat="server" Width="52px" onKeyUp="sumUp1()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox8" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox8" runat="server" Width="52px" onKeyUp="sumUp1()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox9" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox9" runat="server" Width="52px" onKeyUp="sumUp1()"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                          <asp:Panel ID="Panel1" runat="server" DefaultButton="Button1">
                                                             <asp:Button ID="Button1" runat="server" Text="Button" Style="display:none" OnClick="Button1_Click"  />
-                                                        <asp:TextBox ID="TextBox10" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox10_TextChanged"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox10" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox10_TextChanged" onKeyUp="sumUp1()"></asp:TextBox>
                                                            </asp:Panel>
                                                     </td>
                                                 </tr>
@@ -298,30 +332,30 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox12" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox12" runat="server" Width="52px" onKeyUp="sumUp1()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox13" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox13" runat="server" Width="52px" onKeyUp="sumUp1()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox14" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox14" runat="server" Width="52px" onKeyUp="sumUp1()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox15" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox15" runat="server" Width="52px" onKeyUp="sumUp1()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox16" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox16" runat="server" Width="52px" onKeyUp="sumUp1()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox17" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox17" runat="server" Width="52px" onKeyUp="sumUp1()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox18" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox18" runat="server" Width="52px" onKeyUp="sumUp1()"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                          <asp:Panel ID="Panel2" runat="server" DefaultButton="Button2">
                                                             <asp:Button ID="Button2" runat="server" Text="Button" Style="display:none" OnClick="Button2_Click"  />
-                                                        <asp:TextBox ID="TextBox19" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox19_TextChanged"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox19" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox19_TextChanged" onKeyUp="sumUp1()"></asp:TextBox>
                                                         </asp:Panel>
                                                     </td>
                                                 </tr>
@@ -396,30 +430,30 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox22" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox22" runat="server" Width="52px" onKeyUp="sumUp2()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox23" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox23" runat="server" Width="52px" onKeyUp="sumUp2()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox24" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox24" runat="server" Width="52px" onKeyUp="sumUp2()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox25" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox25" runat="server" Width="52px" onKeyUp="sumUp2()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox26" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox26" runat="server" Width="52px" onKeyUp="sumUp2()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox27" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox27" runat="server" Width="52px" onKeyUp="sumUp2()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox28" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox28" runat="server" Width="52px" onKeyUp="sumUp2()"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                         <asp:Panel ID="Panel3" runat="server" DefaultButton="Button3">
                                                             <asp:Button ID="Button3" runat="server" Text="Button" Style="display:none" OnClick="Button3_Click"  />
-                                                        <asp:TextBox ID="TextBox29" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox29_TextChanged"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox29" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox29_TextChanged" onKeyUp="sumUp2()"></asp:TextBox>
                                                         </asp:Panel>
                                                     </td>
                                                 </tr>
@@ -478,30 +512,30 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox31" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox31" runat="server" Width="52px" onKeyUp="sumUp2()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox32" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox32" runat="server" Width="52px" onKeyUp="sumUp2()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox33" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox33" runat="server" Width="52px" onKeyUp="sumUp2()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox34" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox34" runat="server" Width="52px" onKeyUp="sumUp2()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox35" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox35" runat="server" Width="52px" onKeyUp="sumUp2()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox36" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox36" runat="server" Width="52px" onKeyUp="sumUp2()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox37" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox37" runat="server" Width="52px" onKeyUp="sumUp2()"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                         <asp:Panel ID="Panel4" runat="server" DefaultButton="Button4">
                                                             <asp:Button ID="Button4" runat="server" Text="Button" Style="display:none" OnClick="Button4_Click"  />
-                                                        <asp:TextBox ID="TextBox38" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox38_TextChanged"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox38" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox38_TextChanged" onKeyUp="sumUp2()"></asp:TextBox>
                                                             </asp:Panel>
                                                     </td>
                                                 </tr>
@@ -576,30 +610,30 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox41" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox41" runat="server" Width="52px" onKeyUp="sumUp3()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox42" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox42" runat="server" Width="52px" onKeyUp="sumUp3()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox43" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox43" runat="server" Width="52px" onKeyUp="sumUp3()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox44" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox44" runat="server" Width="52px" onKeyUp="sumUp3()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox45" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox45" runat="server" Width="52px" onKeyUp="sumUp3()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox46" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox46" runat="server" Width="52px" onKeyUp="sumUp3()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox47" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox47" runat="server" Width="52px" onKeyUp="sumUp3()"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                         <asp:Panel ID="Panel5" runat="server" DefaultButton="Button5">
                                                             <asp:Button ID="Button5" runat="server" Text="Button" Style="display:none" OnClick="Button5_Click"  />
-                                                        <asp:TextBox ID="TextBox48" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox48_TextChanged"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox48" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox48_TextChanged" onKeyUp="sumUp3()"></asp:TextBox>
                                                             </asp:Panel>
                                                     </td>
                                                 </tr>
@@ -658,30 +692,30 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox50" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox50" runat="server" Width="52px" onKeyUp="sumUp3()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox51" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox51" runat="server" Width="52px" onKeyUp="sumUp3()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox52" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox52" runat="server" Width="52px" onKeyUp="sumUp3()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox53" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox53" runat="server" Width="52px" onKeyUp="sumUp3()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox54" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox54" runat="server" Width="52px" onKeyUp="sumUp3()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox55" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox55" runat="server" Width="52px" onKeyUp="sumUp3()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox56" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox56" runat="server" Width="52px" onKeyUp="sumUp3()"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                         <asp:Panel ID="Panel6" runat="server" DefaultButton="Button6">
                                                             <asp:Button ID="Button6" runat="server" Text="Button" Style="display:none" OnClick="Button6_Click"  />
-                                                        <asp:TextBox ID="TextBox57" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox57_TextChanged"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox57" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox57_TextChanged" onKeyUp="sumUp3()"></asp:TextBox>
                                                         </asp:Panel>
                                                     </td>
                                                 </tr>
@@ -756,30 +790,30 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox60" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox60" runat="server" Width="52px" onKeyUp="sumUp4()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox61" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox61" runat="server" Width="52px" onKeyUp="sumUp4()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox62" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox62" runat="server" Width="52px" onKeyUp="sumUp4()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox63" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox63" runat="server" Width="52px" onKeyUp="sumUp4()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox64" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox64" runat="server" Width="52px" onKeyUp="sumUp4()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox65" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox65" runat="server" Width="52px" onKeyUp="sumUp4()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox66" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox66" runat="server" Width="52px" onKeyUp="sumUp4()"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                         <asp:Panel ID="Panel7" runat="server" DefaultButton="Button7">
                                                             <asp:Button ID="Button7" runat="server" Text="Button" Style="display:none" OnClick="Button7_Click"  />
-                                                        <asp:TextBox ID="TextBox67" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox67_TextChanged"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox67" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox67_TextChanged" onKeyUp="sumUp4()"></asp:TextBox>
                                                         </asp:Panel>
                                                     </td>
                                                 </tr>
@@ -838,30 +872,30 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox69" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox69" runat="server" Width="52px" onKeyUp="sumUp4()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox70" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox70" runat="server" Width="52px" onKeyUp="sumUp4()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox71" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox71" runat="server" Width="52px" onKeyUp="sumUp4()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox72" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox72" runat="server" Width="52px" onKeyUp="sumUp4()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox73" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox73" runat="server" Width="52px" onKeyUp="sumUp4()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox74" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox74" runat="server" Width="52px" onKeyUp="sumUp4()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox75" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox75" runat="server" Width="52px" onKeyUp="sumUp4()"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                         <asp:Panel ID="Panel8" runat="server" DefaultButton="Button8">
                                                             <asp:Button ID="Button8" runat="server" Text="Button" Style="display:none" OnClick="Button8_Click"  />
-                                                        <asp:TextBox ID="TextBox76" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox76_TextChanged"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox76" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox76_TextChanged" onKeyUp="sumUp4()"></asp:TextBox>
                                                         </asp:Panel>
                                                     </td>
                                                 </tr>
@@ -936,30 +970,30 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox79" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox79" runat="server" Width="52px" onKeyUp="sumUp5()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox80" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox80" runat="server" Width="52px" onKeyUp="sumUp5()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox81" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox81" runat="server" Width="52px" onKeyUp="sumUp5()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox82" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox82" runat="server" Width="52px" onKeyUp="sumUp5()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox83" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox83" runat="server" Width="52px" onKeyUp="sumUp5()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox84" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox84" runat="server" Width="52px" onKeyUp="sumUp5()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox85" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox85" runat="server" Width="52px" onKeyUp="sumUp5()"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                         <asp:Panel ID="Panel9" runat="server" DefaultButton="Button9">
                                                             <asp:Button ID="Button9" runat="server" Text="Button" Style="display:none" OnClick="Button9_Click"  />
-                                                        <asp:TextBox ID="TextBox86" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox86_TextChanged"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox86" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox86_TextChanged" onKeyUp="sumUp5()"></asp:TextBox>
                                                         </asp:Panel>
                                                     </td>
                                                 </tr>
@@ -1018,30 +1052,30 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox88" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox88" runat="server" Width="52px" onKeyUp="sumUp5()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox89" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox89" runat="server" Width="52px" onKeyUp="sumUp5()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox90" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox90" runat="server" Width="52px" onKeyUp="sumUp5()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox91" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox91" runat="server" Width="52px" onKeyUp="sumUp5()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox92" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox92" runat="server" Width="52px" onKeyUp="sumUp5()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox93" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox93" runat="server" Width="52px" onKeyUp="sumUp5()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox94" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox94" runat="server" Width="52px" onKeyUp="sumUp5()"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                         <asp:Panel ID="Panel10" runat="server" DefaultButton="Button10">
                                                             <asp:Button ID="Button10" runat="server" Text="Button" Style="display:none" OnClick="Button10_Click"  />
-                                                        <asp:TextBox ID="TextBox95" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox95_TextChanged"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox95" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox95_TextChanged" onKeyUp="sumUp5()"></asp:TextBox>
                                                     </asp:Panel>
                                                      </td>
                                                 </tr>
@@ -1116,30 +1150,30 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox98" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox98" runat="server" Width="52px" onKeyUp="sumUp6()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox99" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox99" runat="server" Width="52px" onKeyUp="sumUp6()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox100" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox100" runat="server" Width="52px" onKeyUp="sumUp6()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox101" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox101" runat="server" Width="52px" onKeyUp="sumUp6()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox102" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox102" runat="server" Width="52px" onKeyUp="sumUp6()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox103" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox103" runat="server" Width="52px" onKeyUp="sumUp6()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox104" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox104" runat="server" Width="52px" onKeyUp="sumUp6()"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                         <asp:Panel ID="Panel11" runat="server" DefaultButton="Button11">
                                                             <asp:Button ID="Button11" runat="server" Text="Button" Style="display:none" OnClick="Button11_Click"  />
-                                                        <asp:TextBox ID="TextBox105" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox105_TextChanged"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox105" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox105_TextChanged" onKeyUp="sumUp6()"></asp:TextBox>
                                                         </asp:Panel>
                                                     </td>
                                                 </tr>
@@ -1198,30 +1232,30 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox107" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox107" runat="server" Width="52px" onKeyUp="sumUp6()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox108" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox108" runat="server" Width="52px" onKeyUp="sumUp6()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox109" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox109" runat="server" Width="52px" onKeyUp="sumUp6()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox110" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox110" runat="server" Width="52px" onKeyUp="sumUp6()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox111" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox111" runat="server" Width="52px" onKeyUp="sumUp6()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox112" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox112" runat="server" Width="52px" onKeyUp="sumUp6()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox113" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox113" runat="server" Width="52px" onKeyUp="sumUp6()"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                         <asp:Panel ID="Panel12" runat="server" DefaultButton="Button12">
                                                             <asp:Button ID="Button12" runat="server" Text="Button" Style="display:none" OnClick="Button12_Click"  />
-                                                        <asp:TextBox ID="TextBox114" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox114_TextChanged"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox114" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox114_TextChanged" onKeyUp="sumUp6()"></asp:TextBox>
                                                         </asp:Panel>
                                                     </td>
                                                 </tr>
@@ -1296,30 +1330,30 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox117" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox117" runat="server" Width="52px" onKeyUp="sumUp7()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox118" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox118" runat="server" Width="52px" onKeyUp="sumUp7()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox119" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox119" runat="server" Width="52px" onKeyUp="sumUp7()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox120" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox120" runat="server" Width="52px" onKeyUp="sumUp7()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox121" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox121" runat="server" Width="52px" onKeyUp="sumUp7()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox122" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox122" runat="server" Width="52px" onKeyUp="sumUp7()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox123" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox123" runat="server" Width="52px" onKeyUp="sumUp7()"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                         <asp:Panel ID="Panel13" runat="server" DefaultButton="Button13">
                                                             <asp:Button ID="Button13" runat="server" Text="Button" Style="display:none" OnClick="Button13_Click"  />
-                                                        <asp:TextBox ID="TextBox124" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox124_TextChanged"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox124" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox124_TextChanged" onKeyUp="sumUp7()"></asp:TextBox>
                                                         </asp:Panel>
                                                     </td>
                                                 </tr>
@@ -1378,30 +1412,30 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox126" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox126" runat="server" Width="52px" onKeyUp="sumUp7()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox127" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox127" runat="server" Width="52px" onKeyUp="sumUp7()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox128" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox128" runat="server" Width="52px" onKeyUp="sumUp7()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox129" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox129" runat="server" Width="52px" onKeyUp="sumUp7()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox130" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox130" runat="server" Width="52px" onKeyUp="sumUp7()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox131" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox131" runat="server" Width="52px" onKeyUp="sumUp7()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox132" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox132" runat="server" Width="52px" onKeyUp="sumUp7()"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                         <asp:Panel ID="Panel14" runat="server" DefaultButton="Button14">
                                                             <asp:Button ID="Button14" runat="server" Text="Button" Style="display:none" OnClick="Button14_Click"  />
-                                                        <asp:TextBox ID="TextBox133" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox133_TextChanged"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox133" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox133_TextChanged" onKeyUp="sumUp7()"></asp:TextBox>
                                                         </asp:Panel>
                                                     </td>
                                                 </tr>
@@ -1476,30 +1510,30 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox136" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox136" runat="server" Width="52px" onKeyUp="sumUp8()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox137" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox137" runat="server" Width="52px" onKeyUp="sumUp8()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox138" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox138" runat="server" Width="52px" onKeyUp="sumUp8()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox139" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox139" runat="server" Width="52px" onKeyUp="sumUp8()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox140" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox140" runat="server" Width="52px" onKeyUp="sumUp8()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox141" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox141" runat="server" Width="52px" onKeyUp="sumUp8()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox142" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox142" runat="server" Width="52px" onKeyUp="sumUp8()"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                         <asp:Panel ID="Panel15" runat="server" DefaultButton="Button15">
                                                             <asp:Button ID="Button15" runat="server" Text="Button" Style="display:none" OnClick="Button15_Click"  />
-                                                        <asp:TextBox ID="TextBox143" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox143_TextChanged"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox143" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox143_TextChanged" onKeyUp="sumUp8()"></asp:TextBox>
                                                         </asp:Panel>
                                                     </td>
                                                 </tr>
@@ -1558,30 +1592,30 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox145" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox145" runat="server" Width="52px" onKeyUp="sumUp8()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox146" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox146" runat="server" Width="52px" onKeyUp="sumUp8()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox147" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox147" runat="server" Width="52px" onKeyUp="sumUp8()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox148" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox148" runat="server" Width="52px" onKeyUp="sumUp8()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox149" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox149" runat="server" Width="52px" onKeyUp="sumUp8()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox150" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox150" runat="server" Width="52px" onKeyUp="sumUp8()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox151" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox151" runat="server" Width="52px" onKeyUp="sumUp8()"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                         <asp:Panel ID="Panel16" runat="server" DefaultButton="Button16">
                                                             <asp:Button ID="Button16" runat="server" Text="Button" Style="display:none" OnClick="Button16_Click"  />
-                                                        <asp:TextBox ID="TextBox152" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox152_TextChanged"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox152" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox152_TextChanged" onKeyUp="sumUp8()"></asp:TextBox>
                                                         </asp:Panel>
                                                     </td>
                                                 </tr>
@@ -1656,30 +1690,30 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox155" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox155" runat="server" Width="52px" onKeyUp="sumUp9()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox156" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox156" runat="server" Width="52px" onKeyUp="sumUp9()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox157" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox157" runat="server" Width="52px" onKeyUp="sumUp9()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox158" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox158" runat="server" Width="52px" onKeyUp="sumUp9()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox159" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox159" runat="server" Width="52px" onKeyUp="sumUp9()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox160" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox160" runat="server" Width="52px" onKeyUp="sumUp9()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox161" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox161" runat="server" Width="52px" onKeyUp="sumUp9()"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                         <asp:Panel ID="Panel17" runat="server" DefaultButton="Button17">
                                                             <asp:Button ID="Button17" runat="server" Text="Button" Style="display:none" OnClick="Button17_Click"  />
-                                                        <asp:TextBox ID="TextBox162" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox162_TextChanged"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox162" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox162_TextChanged" onKeyUp="sumUp9()"></asp:TextBox>
                                                         </asp:Panel>
                                                     </td>
                                                 </tr>
@@ -1738,30 +1772,30 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox164" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox164" runat="server" Width="52px" onKeyUp="sumUp9()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox165" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox165" runat="server" Width="52px" onKeyUp="sumUp9()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox166" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox166" runat="server" Width="52px" onKeyUp="sumUp9()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox167" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox167" runat="server" Width="52px" onKeyUp="sumUp9()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox168" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox168" runat="server" Width="52px" onKeyUp="sumUp9()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox169" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox169" runat="server" Width="52px" onKeyUp="sumUp9()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox170" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox170" runat="server" Width="52px" onKeyUp="sumUp9()"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                         <asp:Panel ID="Panel18" runat="server" DefaultButton="Button18">
                                                             <asp:Button ID="Button18" runat="server" Text="Button" Style="display:none" OnClick="Button18_Click"  />
-                                                        <asp:TextBox ID="TextBox171" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox171_TextChanged"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox171" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox171_TextChanged" onKeyUp="sumUp9()"></asp:TextBox>
                                                         </asp:Panel>
                                                     </td>
                                                 </tr>
@@ -1836,30 +1870,30 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox174" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox174" runat="server" Width="52px" onKeyUp="sumUp10()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox175" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox175" runat="server" Width="52px" onKeyUp="sumUp10()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox176" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox176" runat="server" Width="52px" onKeyUp="sumUp10()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox177" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox177" runat="server" Width="52px" onKeyUp="sumUp10()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox178" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox178" runat="server" Width="52px" onKeyUp="sumUp10()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox179" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox179" runat="server" Width="52px" onKeyUp="sumUp10()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox180" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox180" runat="server" Width="52px" onKeyUp="sumUp10()"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                         <asp:Panel ID="Panel19" runat="server" DefaultButton="Button19">
                                                             <asp:Button ID="Button19" runat="server" Text="Button" Style="display:none" OnClick="Button19_Click"  />
-                                                        <asp:TextBox ID="TextBox181" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox181_TextChanged"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox181" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox181_TextChanged" onKeyUp="sumUp10()"></asp:TextBox>
                                                         </asp:Panel>
                                                     </td>
                                                 </tr>
@@ -1918,30 +1952,30 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox183" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox183" runat="server" Width="52px" onKeyUp="sumUp10()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox184" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox184" runat="server" Width="52px" onKeyUp="sumUp10()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox185" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox185" runat="server" Width="52px" onKeyUp="sumUp10()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox186" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox186" runat="server" Width="52px" onKeyUp="sumUp10()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox187" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox187" runat="server" Width="52px" onKeyUp="sumUp10()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox188" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox188" runat="server" Width="52px" onKeyUp="sumUp10()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox189" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox189" runat="server" Width="52px" onKeyUp="sumUp10()"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                         <asp:Panel ID="Panel20" runat="server" DefaultButton="Button20">
                                                             <asp:Button ID="Button20" runat="server" Text="Button" Style="display:none" OnClick="Button20_Click"  />
-                                                        <asp:TextBox ID="TextBox190" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox190_TextChanged"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox190" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox190_TextChanged" onKeyUp="sumUp10()"></asp:TextBox>
                                                         </asp:Panel>
                                                     </td>
                                                 </tr>
@@ -2016,30 +2050,30 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox193" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox193" runat="server" Width="52px" onKeyUp="sumUp11()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox194" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox194" runat="server" Width="52px" onKeyUp="sumUp11()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox195" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox195" runat="server" Width="52px" onKeyUp="sumUp11()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox196" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox196" runat="server" Width="52px" onKeyUp="sumUp11()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox197" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox197" runat="server" Width="52px" onKeyUp="sumUp11()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox198" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox198" runat="server" Width="52px" onKeyUp="sumUp11()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox199" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox199" runat="server" Width="52px" onKeyUp="sumUp11()"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                         <asp:Panel ID="Panel21" runat="server" DefaultButton="Button21">
                                                             <asp:Button ID="Button21" runat="server" Text="Button" Style="display:none" OnClick="Button21_Click"  />
-                                                        <asp:TextBox ID="TextBox200" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox200_TextChanged"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox200" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox200_TextChanged" onKeyUp="sumUp11()"></asp:TextBox>
                                                         </asp:Panel>
                                                     </td>
                                                 </tr>
@@ -2098,30 +2132,30 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox202" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox202" runat="server" Width="52px" onKeyUp="sumUp11()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox203" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox203" runat="server" Width="52px" onKeyUp="sumUp11()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox204" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox204" runat="server" Width="52px" onKeyUp="sumUp11()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox205" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox205" runat="server" Width="52px" onKeyUp="sumUp11()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox206" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox206" runat="server" Width="52px" onKeyUp="sumUp11()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox207" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox207" runat="server" Width="52px" onKeyUp="sumUp11()"></asp:TextBox>
                                                     </td>
                                                     <td>
-                                                        <asp:TextBox ID="TextBox208" runat="server" Width="52px"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox208" runat="server" Width="52px" onKeyUp="sumUp11()"></asp:TextBox>
                                                     </td>
                                                     <td>
                                                         <asp:Panel ID="Panel22" runat="server" DefaultButton="Button22">
                                                             <asp:Button ID="Button22" runat="server" Text="Button" Style="display:none" OnClick="Button22_Click"  />
-                                                        <asp:TextBox ID="TextBox209" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox209_TextChanged"></asp:TextBox>
+                                                        <asp:TextBox ID="TextBox209" runat="server" AutoPostBack="False" Width="52px" OnTextChanged="TextBox209_TextChanged" onKeyUp="sumUp11()"></asp:TextBox>
                                                         </asp:Panel>
                                                     </td>
                                                 </tr>
